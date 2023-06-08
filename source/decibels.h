@@ -23,7 +23,7 @@ namespace decibels
         }
         else
         {
-            db_to_raw_gain(db_val);
+            return db_to_raw_gain(db_val);
         }
     }
 
@@ -35,7 +35,7 @@ namespace decibels
         }
         else
         {
-            db_to_raw_gain(db_val);
+            return db_to_raw_gain(db_val);
         }
     }
 
