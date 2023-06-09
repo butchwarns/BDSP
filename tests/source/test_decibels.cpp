@@ -11,7 +11,7 @@ typedef std::numeric_limits<double> dbl;
 
 TEST_CASE("Decibel conversions", "[decibels]")
 {
-    using namespace decibels;
+    using namespace bdsp::decibels;
 
     SECTION("Decibel to raw gain conversion")
     {

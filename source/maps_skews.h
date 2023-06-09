@@ -1,7 +1,7 @@
 #ifndef __MAPS_SKEWS_H__
 #define __MAPS_SKEWS_H__
 
-namespace maps_skews
+namespace bdsp::maps_skews
 {
     /**
      * @brief Maps a normalized value (-1.0 to 1.0) to a given output range
@@ -37,6 +37,6 @@ namespace maps_skews
         const T in_norm = (val - in_lo) / (in_hi - in_lo);
         return map_linear_norm<T>(in_norm, out_hi, out_lo);
     }
-} // namespace maps_skews
+} // namespace bdsp::maps_skews
 
 #endif // __MAPS_SKEWS__

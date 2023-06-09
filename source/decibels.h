@@ -3,7 +3,7 @@
 
 #include <cmath>
 
-namespace decibels
+namespace bdsp::decibels
 {
     /**
      * @brief Converts decibel (relative to 1.0) value to raw gain coefficient
@@ -88,6 +88,6 @@ namespace decibels
     {
         return 20.0f * log10f(raw_gain);
     }
-} // namespace decibels
+} // namespace bdsp::decibels
 
 #endif // __DECIBELS_H__
