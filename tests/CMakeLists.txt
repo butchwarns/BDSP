@@ -8,7 +8,8 @@ add_subdirectory(Catch2)
 
 set(SRC_TESTS 
     source/test_tests.cpp
-    source/test_decibels.cpp)
+    source/test_decibel.cpp
+    source/test_util.cpp)
 
 add_executable(bdsp_tests
     ${SRC_TESTS})
