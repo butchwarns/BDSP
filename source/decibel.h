@@ -1,9 +1,9 @@
-#ifndef __DECIBELS_H__
-#define __DECIBELS_H__
+#ifndef __DECIBEL_H__
+#define __DECIBEL_H__
 
 #include <cmath>
 
-namespace bdsp::decibels
+namespace bdsp::decibel
 {
     /**
      * @brief Converts decibel (relative to 1.0) value to raw gain coefficient
@@ -88,6 +88,5 @@ namespace bdsp::decibels
     {
         return 20.0f * log10f(raw_gain);
     }
-} // namespace bdsp::decibels
-
-#endif // __DECIBELS_H__
+} // namespace bdsp::decibel
+#endif // __DECIBEL_H__

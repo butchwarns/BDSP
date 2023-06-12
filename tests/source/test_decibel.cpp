@@ -3,15 +3,15 @@
 
 #include <numeric>
 
-#include "../../source/decibels.h"
+#include "../../source/decibel.h"
 
 using Catch::Matchers::WithinAbs;
 typedef std::numeric_limits<float> flt;
 typedef std::numeric_limits<double> dbl;
 
-TEST_CASE("Decibel conversions", "[decibels]")
+TEST_CASE("Decibel conversions", "[decibel]")
 {
-    using namespace bdsp::decibels;
+    using namespace bdsp::decibel;
 
     SECTION("Decibel to raw gain conversion")
     {
@@ -39,12 +39,12 @@ TEST_CASE("Decibel conversions", "[decibels]")
     }
     SECTION("Raw gain to decibel conversion")
     {
-        // Example double conversions
+        // Some double conversions
         REQUIRE_THAT(raw_gain_to_db(1.0), WithinAbs(0.0, dbl::min()));
         REQUIRE_THAT(raw_gain_to_db(2.0), WithinAbs(6.0206, 0.0001));
         REQUIRE_THAT(raw_gain_to_db(0.01), WithinAbs(-40, dbl::min()));
 
-        // Example float conversions
+        // Some float conversions
         REQUIRE_THAT(raw_gain_to_db(1.0f), WithinAbs(0.0, dbl::min()));
         REQUIRE_THAT(raw_gain_to_db(2.0f), WithinAbs(6.0206, 0.0001));
         REQUIRE_THAT(raw_gain_to_db(0.01f), WithinAbs(-40, dbl::min()));

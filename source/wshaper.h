@@ -1,10 +1,10 @@
-#ifndef __WAVESHAPER_H__
-#define __WAVESHAPER_H__
+#ifndef __WSHAPER_H__
+#define __WSHAPER_H__
 
 #include <cmath>
-#include "utility.h"
+#include "util.h"
 
-namespace bdsp::waveshaper
+namespace bdsp::wshaper
 {
     /**
      * @brief Fast polynomial tanh approximation
@@ -109,5 +109,5 @@ namespace bdsp::waveshaper
     {
         return 1.0 / (fabs(x) + 1.0);
     }
-} // namespace bdsp::waveshaper
-#endif
+} // namespace bdsp::wshaper
+#endif // __WSHAPER_H__
