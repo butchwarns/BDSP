@@ -3,7 +3,7 @@
 
 #include <string>
 
-TEST_CASE("Check tests can be run", "[meta]")
+TEST_CASE("Tests can be run", "[meta]")
 {
     SECTION("Example test section")
     {
