@@ -9,12 +9,12 @@ namespace bdsp::maps
      *
      * @tparam T float or double
      * @param norm_val
-     * @param out_hi
      * @param out_lo
+     * @param out_hi
      * @return T
      */
     template <typename T>
-    inline T map_linear_norm(const T norm_val, const T out_hi, const T out_lo)
+    inline T map_linear_norm(const T norm_val, const T out_lo, const T out_hi)
     {
         return norm_val * (out_hi - out_lo) + out_lo;
     }
@@ -25,17 +25,45 @@ namespace bdsp::maps
      *
      * @tparam T float or double
      * @param val
-     * @param in_hi
      * @param in_lo
-     * @param out_hi
+     * @param in_hi
      * @param out_lo
+     * @param out_hi
      * @return T
      */
     template <typename T>
-    inline T map_linear(const T val, const T in_hi, const T in_lo, const T out_hi, const T out_lo)
+    inline T map_linear(const T val, const T in_lo, const T in_hi, const T out_lo, const T out_hi)
     {
         const T in_norm = (val - in_lo) / (in_hi - in_lo);
-        return map_linear_norm<T>(in_norm, out_hi, out_lo);
+        return map_linear_norm<T>(in_norm, out_lo, out_hi);
+    }
+
+    /**
+     * @brief Convert value from unipolar to bipolar range
+     *
+     * @tparam T float or double
+     * @param x Unipolar value in range [0.0, 1.0]
+     * @return Corresponding bipolar value in range [-1.0, 1.0]
+     */
+    template <typename T = double>
+    inline T unipolarToBipolar(T x)
+    {
+        // return (x - static_cast<T>(0.5)) * static_cast<T>(2.0);
+        return map_linear_norm<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0));
+    }
+
+    /**
+     * @brief Convert value from bipolar to unipolar range
+     *
+     * @tparam T float or double
+     * @param x Bipolar value in range [-1.0, 1.0]
+     * @return Corresponding unipolar value in range [0.0, 1.0]
+     */
+    template <typename T = double>
+    inline T bipolarToUnipolar(T x)
+    {
+        // return static_cast<T>(0.5) * x + static_cast<T>(0.5);
+        return map_linear<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0), static_cast<T>(0.0), static_cast<T>(1.0));
     }
 } // namespace bdsp::maps
 #endif // __MAPS_H__
