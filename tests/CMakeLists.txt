@@ -9,10 +9,14 @@ add_subdirectory(Catch2)
 set(SRC_TESTS 
     source/test_tests.cpp
     source/test_decibel.cpp
-    source/test_util.cpp)
+    source/test_util.cpp
+    source/test_maps.cpp)
+
+set(SRC_BENCHMARKS )
 
 add_executable(bdsp_tests
-    ${SRC_TESTS})
+    ${SRC_TESTS}
+    ${SRC_BENCHMARKS})
 
 target_link_libraries(bdsp_tests 
     PRIVATE

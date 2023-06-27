@@ -39,31 +39,6 @@ TEST_CASE("Float underflow", "[util]")
     }
 }
 
-TEST_CASE("Signal polarity conversions", "[util]")
-{
-
-    SECTION("Unipolar to bipolar conversion")
-    {
-        // Some double conversions
-        REQUIRE_THAT(unipolarToBipolar(0.25), WithinAbs(-0.5, dbl::min()));
-        REQUIRE_THAT(unipolarToBipolar(0.5), WithinAbs(0.0, dbl::min()));
-
-        // Some float conversions
-        REQUIRE_THAT(unipolarToBipolar(0.25f), WithinAbs(-0.5f, flt::min()));
-        REQUIRE_THAT(unipolarToBipolar(0.5f), WithinAbs(0.0f, flt::min()));
-    }
-    SECTION("Bipolar to unipolar conversion")
-    {
-        // Some double conversions
-        REQUIRE_THAT(bipolarToUnipolar(-0.5), WithinAbs(0.25, dbl::min()));
-        REQUIRE_THAT(bipolarToUnipolar(1.0), WithinAbs(1.0, dbl::min()));
-
-        // Some float conversions
-        REQUIRE_THAT(bipolarToUnipolar(-0.5f), WithinAbs(0.25f, flt::min()));
-        REQUIRE_THAT(bipolarToUnipolar(1.0f), WithinAbs(1.0f, flt::min()));
-    }
-}
-
 TEST_CASE("Signum function", "[util]")
 {
     SECTION("sgn(x)")
