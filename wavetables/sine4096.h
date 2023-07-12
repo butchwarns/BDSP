@@ -1,7 +1,7 @@
 #ifndef __SINE_4096_H__
 #define __SINE_4096_H__
 
-#define SINE4096_LEN 4096
+#define SINE4096_LEN 4096 // 2^12
 
 const float sine4096[4096] = [
     0.0,
