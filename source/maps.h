@@ -30,7 +30,7 @@ namespace bdsp::maps
      * @return T
      */
     template <typename T>
-    inline T map_linear_norm(const T norm_val, const T out_lo, const T out_hi)
+    inline T map_linear_norm_pos(const T norm_val, const T out_lo, const T out_hi)
     {
         return norm_val * (out_hi - out_lo) + out_lo;
     }
