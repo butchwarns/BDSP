@@ -61,7 +61,7 @@ namespace bdsp::maps
      * @param x Unipolar value in range [0.0, 1.0]
      * @return Corresponding bipolar value in range [-1.0, 1.0]
      */
-    template <typename T = double>
+    template <typename T>
     inline T unipolarToBipolar(T x)
     {
         // return (x - static_cast<T>(0.5)) * static_cast<T>(2.0);
@@ -75,7 +75,7 @@ namespace bdsp::maps
      * @param x Bipolar value in range [-1.0, 1.0]
      * @return Corresponding unipolar value in range [0.0, 1.0]
      */
-    template <typename T = double>
+    template <typename T>
     inline T bipolarToUnipolar(T x)
     {
         // return static_cast<T>(0.5) * x + static_cast<T>(0.5);
