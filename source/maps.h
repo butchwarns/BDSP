@@ -1,6 +1,8 @@
 #ifndef __MAPS_H__
 #define __MAPS_H__
 
+#include <cmath>
+
 namespace bdsp
 {
     namespace maps
@@ -82,6 +84,38 @@ namespace bdsp
         {
             // return static_cast<T>(0.5) * x + static_cast<T>(0.5);
             return map_linear<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0), static_cast<T>(0.0), static_cast<T>(1.0));
+        }
+
+        /**
+         * @brief Map a value in [0.0, 1.0] to the same interval with a skew factor
+         *
+         * skew = 1.0 gives a linear map
+         * skew in [0.0, 1.0[ gives more resolution in the lower range
+         * skew in [1.0, INF[ gives more resolution in the upper range
+         *
+         * @param NormVal Normalised value to map
+         * @param skew Skew factor
+         * @return Mapped value
+         */
+        inline float skew_norm_pos(float val, float skew)
+        {
+            return powf(val, 1.0f / skew);
+        }
+
+        /**
+         * @brief Map a value in [0.0, 1.0] to the same interval with a skew factor
+         *
+         * skew = 1.0 gives a linear map
+         * skew in [0.0, 1.0[ gives more resolution in the lower range
+         * skew in [1.0, INF[ gives more resolution in the upper range
+         *
+         * @param NormVal Normalised value to map
+         * @param skew Skew factor
+         * @return Mapped value
+         */
+        inline double skew_norm_pos(double val, double skew)
+        {
+            return pow(val, 1.0 / skew);
         }
 
     } // maps
