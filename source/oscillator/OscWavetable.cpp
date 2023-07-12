@@ -32,6 +32,12 @@ float OscWavetable::process()
     // Increment current read index
     idx += delta;
 
+    // Keep index from wrapping erroneously due to overflow
+    if (idx >= static_cast<float>(SINE4096_LEN - 1))
+    {
+        idx -= SINE4096_LEN;
+    }
+
     // Output
     return y;
 }
@@ -40,7 +46,7 @@ float OscWavetable::process()
 
 void OscWavetable::update_delta()
 {
-    delta = SINE4096_LEN * freq / sample_rate;
+    delta = static_cast<float>(SINE4096_LEN) * freq / sample_rate;
 }
 
 float OscWavetable::lookup(float index)
