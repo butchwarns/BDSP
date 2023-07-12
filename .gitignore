@@ -60,4 +60,5 @@ docs/build/
 # DSP - RND
 ################################################################################
 
-wavetables/.ipynb_checkpoints
+tables/wavetables/.ipynb_checkpoints
+tables/envelopes/.ipynb_checkpoints
