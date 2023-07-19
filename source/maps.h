@@ -1,6 +1,7 @@
 #ifndef __MAPS_H__
 #define __MAPS_H__
 
+#include "consts.h"
 #include <cmath>
 
 namespace bdsp
@@ -116,6 +117,23 @@ namespace bdsp
         inline double skew_norm_pos(double val, double skew)
         {
             return pow(val, 1.0 / skew);
+        }
+
+        /**
+         * @brief Prewarp a frequency to be preserved in trapezoidal integration
+         *
+         * To be used with bilinear transformation, topology-preserving transformation, etc.
+         *
+         * @param freq Frequency to be preserved
+         * @param sample_rate Sample rate of the system
+         * @return Prewarped frequency
+         */
+        inline float prewarp(const float freq, const float sample_rate)
+        {
+            const float wd = consts::TWO_PI * freq;
+            const float wa = 2.0 * sample_rate * tanf(wd * 1.0 / (2.0 * sample_rate));
+
+            return wa;
         }
 
     } // maps
