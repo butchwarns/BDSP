@@ -131,7 +131,7 @@ namespace bdsp
         inline float prewarp(const float freq, const float sample_rate)
         {
             const float wd = consts::TWO_PI * freq;
-            const float wa = 2.0 * sample_rate * tanf(wd * 1.0 / (2.0 * sample_rate));
+            const float wa = 2.0 * sample_rate * tanf(wd / (2.0 * sample_rate));
 
             return wa;
         }
