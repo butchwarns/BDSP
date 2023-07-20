@@ -1,21 +1,21 @@
-#include "LP1_RC_TPT.h"
+#include "HP1_RC_TPT.h"
 
 namespace bdsp
 {
     namespace filter
     {
 
-        LP1_RC_TPT::LP1_RC_TPT()
+        HP1_RC_TPT::HP1_RC_TPT()
             : sample_rate(0.0),
               s(0.0)
         {
         }
 
-        LP1_RC_TPT::~LP1_RC_TPT()
+        HP1_RC_TPT::~HP1_RC_TPT()
         {
         }
 
-        void LP1_RC_TPT::reset(double _sample_rate)
+        void HP1_RC_TPT::reset(double _sample_rate)
         {
             sample_rate = _sample_rate;
 
@@ -23,19 +23,20 @@ namespace bdsp
             g1 = 0.0;
         }
 
-        double LP1_RC_TPT::process(double x)
+        double HP1_RC_TPT::process(double x)
         {
-            // Calculate output sample
+            // Calculate output for low-pass
             double v = g1 * (x - s);
             double y = v + s;
 
             // Update state register
             s = v + y;
 
-            return y;
+            // Subtract low-pass output from input to find high-pass output
+            return x - y;
         }
 
-        void LP1_RC_TPT::set_cutoff(double cutoff)
+        void HP1_RC_TPT::set_cutoff(double cutoff)
         {
             // Calculate gamma from cutoff
             const double w = bdsp::consts::TWO_PI * cutoff;
@@ -43,7 +44,7 @@ namespace bdsp
             g1 = g / (1.0 + g);
         }
 
-        void LP1_RC_TPT::set_cutoff_prewarp(double cutoff)
+        void HP1_RC_TPT::set_cutoff_prewarp(double cutoff)
         {
             // Calculate gamma from prewarped cutoff
             const double w_prewarped = maps::prewarp(cutoff, sample_rate);
@@ -51,12 +52,12 @@ namespace bdsp
             g1 = g / (1.0 + g);
         }
 
-        void LP1_RC_TPT::set_cutoff_g1(double _g1)
+        void HP1_RC_TPT::set_cutoff_g1(double _g1)
         {
             g1 = _g1;
         }
 
-        float LP1_RC_TPT::get_state()
+        float HP1_RC_TPT::get_state()
         {
             return s;
         }

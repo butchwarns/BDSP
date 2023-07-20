@@ -1,5 +1,5 @@
-#ifndef __LP1_RC_TPT_H__
-#define __LP1_RC_TPT_H__
+#ifndef __HP1_RC_TPT_H__
+#define __HP1_RC_TPT_H__
 
 #include "../maps.h"
 
@@ -8,11 +8,11 @@ namespace bdsp
     namespace filter
     {
 
-        class LP1_RC_TPT
+        class HP1_RC_TPT
         {
         public:
-            LP1_RC_TPT();
-            ~LP1_RC_TPT();
+            HP1_RC_TPT();
+            ~HP1_RC_TPT();
 
             void reset(double _sample_rate);
 
@@ -33,4 +33,4 @@ namespace bdsp
     } // filter
 } // bdsp
 
-#endif // __LP1_RC_TPT_H__
+#endif // __HP1_RC_TPT_H__
