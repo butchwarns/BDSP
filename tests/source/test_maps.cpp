@@ -26,12 +26,12 @@ TEST_CASE("Linear maps", "[maps]")
     SECTION("Normalized linear map")
     {
         // Some double maps
-        REQUIRE_THAT(map_linear_norm(0.5, -1.0, 1.0), WithinAbs(0.0, dbl::min()));
-        REQUIRE_THAT(map_linear_norm(0.75, 1.0, -1.0), WithinAbs(-0.5, dbl::min()));
+        REQUIRE_THAT(map_linear_norm_pos(0.5, -1.0, 1.0), WithinAbs(0.0, dbl::min()));
+        REQUIRE_THAT(map_linear_norm_pos(0.75, 1.0, -1.0), WithinAbs(-0.5, dbl::min()));
 
         // Some float maps
-        REQUIRE_THAT(map_linear_norm(0.5f, -1.0f, 1.0f), WithinAbs(0.0f, flt::min()));
-        REQUIRE_THAT(map_linear_norm(0.75f, 1.0f, -1.0f), WithinAbs(-0.5f, flt::min()));
+        REQUIRE_THAT(map_linear_norm_pos(0.5f, -1.0f, 1.0f), WithinAbs(0.0f, flt::min()));
+        REQUIRE_THAT(map_linear_norm_pos(0.75f, 1.0f, -1.0f), WithinAbs(-0.5f, flt::min()));
     }
 }
 
