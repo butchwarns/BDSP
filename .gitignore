@@ -41,7 +41,7 @@
 
 # Builds and CMake
 tests/build/*
-tests/!build/*.sh
+!tests/build/*.sh
 
 ################################################################################
 # Docs
