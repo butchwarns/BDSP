@@ -56,7 +56,7 @@ namespace bdsp
         inline T map_linear(const T val, const T in_lo, const T in_hi, const T out_lo, const T out_hi)
         {
             const T in_norm = (val - in_lo) / (in_hi - in_lo);
-            return map_linear_norm<T>(in_norm, out_lo, out_hi);
+            return map_linear_norm_pos<T>(in_norm, out_lo, out_hi);
         }
 
         /**
@@ -69,8 +69,7 @@ namespace bdsp
         template <typename T>
         inline T unipolarToBipolar(T x)
         {
-            // return (x - static_cast<T>(0.5)) * static_cast<T>(2.0);
-            return map_linear_norm<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0));
+            return map_linear_norm_pos<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0));
         }
 
         /**
@@ -83,7 +82,6 @@ namespace bdsp
         template <typename T>
         inline T bipolarToUnipolar(T x)
         {
-            // return static_cast<T>(0.5) * x + static_cast<T>(0.5);
             return map_linear<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0), static_cast<T>(0.0), static_cast<T>(1.0));
         }
 
