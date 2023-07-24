@@ -31,10 +31,10 @@ namespace bdsp
          * 0 if x = 0,
          * -1 if x < 0
          */
-        template <typename T = double>
+        template <typename T>
         inline int sgn(T x)
         {
-            return (static_cast<T>(0) < x) - (x < static_cast<T>(0));
+            return (static_cast<T>(0.0) < x) - (x < static_cast<T>(0.0));
         }
 
         /**
@@ -56,6 +56,30 @@ namespace bdsp
             {
                 d = 0.0;
             }
+        }
+
+        /**
+         * @brief Clamps value to given interval
+         *
+         * @tparam T float or double
+         * @param x Value to clamp
+         * @param min Lower bound
+         * @param max Upper bound
+         * @return Clamped value
+         */
+        template <typename T>
+        inline T clamp(T x, T min = static_cast<T>(-1.0), T max = static_cast<T>(1.0))
+        {
+            if (x < min)
+            {
+                x = min;
+            }
+            if (x > max)
+            {
+                x = max;
+            }
+
+            return x;
         }
 
     } // namespace util
