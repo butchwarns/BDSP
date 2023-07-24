@@ -59,3 +59,19 @@ TEST_CASE("Signum function", "[util]")
         REQUIRE(sgn(0.0) == 0.0);
     }
 }
+
+TEST_CASE("Clamp", "[util]")
+{
+    SECTION("Clamp flaot values")
+    {
+        REQUIRE(clamp(5.0f, -1.0f, 1.0f) == 1.0f);
+        REQUIRE(clamp(-5.0f, -1.0f, 1.0f) == -1.0f);
+        REQUIRE(clamp(-0.2f, -1.0f, 1.0f) == -0.2f);
+    }
+    SECTION("Clamp double values")
+    {
+        REQUIRE(clamp(5.0, -1.0, 1.0) == 1.0);
+        REQUIRE(clamp(-5.0, -1.0, 1.0) == -1.0);
+        REQUIRE(clamp(-0.2, -1.0, 1.0) == -0.2);
+    }
+}
