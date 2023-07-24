@@ -33,6 +33,7 @@ namespace bdsp
         double HP4_Ladder_TPT::process(double x)
         {
             // Calculate input to low-pass chain
+
             const double s1 = hp[0].get_state() * g4;
             const double s2 = hp[1].get_state() * g3;
             const double s3 = hp[2].get_state() * g2;
@@ -40,13 +41,16 @@ namespace bdsp
             const double s_bar = -1.0 * (s1 + s2 + s3 + s4);
             const double u = (x - k * s_bar) / (1 + k * g4);
 
-            double y = u; // Output var
-
             // Calculate output by processing low-pass chain
+
+            double y = u;
+
             for (int n = 0; n < 4; ++n)
             {
                 y = hp[n].process(y);
             }
+
+            y *= (1.0 + k); // Compensate for volume loss from increased resonance
 
             return y;
         }
