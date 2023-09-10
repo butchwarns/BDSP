@@ -25,7 +25,7 @@ namespace bdsp
         /**
          * @brief sgn(x), signum function
          *
-         * @tparam T Integral or floating point type
+         * @tparam T Integral or floating-point type
          * @param x
          * @return 1 if x > 0
          * 0 if x = 0,
@@ -61,7 +61,7 @@ namespace bdsp
         /**
          * @brief Clamps value to given interval
          *
-         * @tparam T float or double
+         * @tparam T floating-point type
          * @param x Value to clamp
          * @param min Lower bound
          * @param max Upper bound
