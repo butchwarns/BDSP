@@ -29,5 +29,20 @@ namespace bdsp
             return zero_freq * powf(2.0f, volt);
         }
 
+        float VoltPerOct::freq_to_volt(float freq)
+        {
+            return log2f(freq / zero_freq);
+        }
+
+        float VoltPerOct::volt_to_freq(float volt, float zero_volt_freq)
+        {
+            return zero_volt_freq * powf(2.0f, volt);
+        }
+
+        float VoltPerOct::freq_to_volt(float freq, float zero_volt_freq)
+        {
+            return log2f(freq / zero_volt_freq);
+        }
+
     } // namespace cv
 } // namespace bdsp

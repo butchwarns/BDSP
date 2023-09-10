@@ -18,6 +18,9 @@ namespace bdsp
             void tune(float _zero_freq);
 
             float volt_to_freq(float volt);
+            float freq_to_volt(float freq);
+            static float volt_to_freq(float volt, float zero_volt_freq);
+            static float freq_to_volt(float freq, float zero_volt_freq);
 
         private:
             float zero_freq;
