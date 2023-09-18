@@ -9,7 +9,7 @@ add_subdirectory(Catch2)
 set(SRC_TESTS 
     source/test_tests.cpp
     source/test_decibel.cpp
-    source/test_util.cpp
+    source/test_utility.cpp
     source/test_mappings.cpp)
 
 set(SRC_BENCHMARKS )

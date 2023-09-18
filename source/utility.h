@@ -1,5 +1,5 @@
-#ifndef __UTIL_H__
-#define __UTIL_H__
+#ifndef __UTILITY_H__
+#define __UTILITY_H__
 
 #include <limits>
 
@@ -7,7 +7,7 @@ typedef std::numeric_limits<float> flt;
 
 namespace bdsp
 {
-    namespace util
+    namespace utility
     {
         /**
          * @brief @f$ \pi @f$
@@ -82,7 +82,7 @@ namespace bdsp
             return x;
         }
 
-    } // namespace util
+    } // namespace utility
 } // namespace bdsp
 
-#endif // __UTIL_H__
+#endif // __UTILITY_H__

@@ -3,13 +3,13 @@
 
 #include <numeric>
 
-#include "../../source/util.h"
+#include "../../source/utility.h"
 
 using Catch::Matchers::WithinAbs;
 typedef std::numeric_limits<float> flt;
 typedef std::numeric_limits<double> dbl;
 
-using namespace bdsp::util;
+using namespace bdsp::utility;
 
 TEST_CASE("Float underflow", "[util]")
 {

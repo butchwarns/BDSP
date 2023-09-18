@@ -1,7 +1,7 @@
 #ifndef __WSHAPER_H__
 #define __WSHAPER_H__
 
-#include "util.h"
+#include "utility.h"
 #include <cmath>
 
 namespace bdsp
@@ -47,7 +47,7 @@ namespace bdsp
         // Exponential soft clipping
         double soft_exp(double x, double sat)
         {
-            return util::sgn(x) * (1.0 - exp(-1.0 * fabs(sat * x)));
+            return utility::sgn(x) * (1.0 - exp(-1.0 * fabs(sat * x)));
         }
 
         // Sinusoidal soft clipping
@@ -55,11 +55,11 @@ namespace bdsp
         {
             if (fabs(x) > 2.0 / 3.0)
             {
-                return util::sgn(x);
+                return utility::sgn(x);
             }
             else
             {
-                return sin(3.0 * util::PI * x / 4.0);
+                return sin(3.0 * utility::PI * x / 4.0);
             }
         }
 
@@ -68,11 +68,11 @@ namespace bdsp
         {
             if (fabs(x) > 2.0 / 3.0)
             {
-                return util::sgn(x);
+                return utility::sgn(x);
             }
             else
             {
-                return util::sgn(x) * (1.0 - pow(fabs(1.5 * x - util::sgn(x)), p));
+                return utility::sgn(x) * (1.0 - pow(fabs(1.5 * x - utility::sgn(x)), p));
             }
         }
 
@@ -81,11 +81,11 @@ namespace bdsp
         {
             if (fabs(x) > 2.0 / 3.0)
             {
-                return util::sgn(x);
+                return utility::sgn(x);
             }
             else if (1.0f / 3.0 <= fabs(x) && fabs(x) <= 2.0 / 3.0)
             {
-                return util::sgn(x) * (3.0 - pow(2.0 - fabs(3.0 * x), 2.0)) / 3.0;
+                return utility::sgn(x) * (3.0 - pow(2.0 - fabs(3.0 * x), 2.0)) / 3.0;
             }
             else
             {
@@ -98,7 +98,7 @@ namespace bdsp
         {
             if (fabs(x) > 2.0 / 3.0)
             {
-                return util::sgn(x);
+                return utility::sgn(x);
             }
             else
             {
