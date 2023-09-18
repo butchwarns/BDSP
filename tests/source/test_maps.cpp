@@ -3,39 +3,39 @@
 
 #include <numeric>
 
-#include "../../source/maps.h"
+#include "../../source/mappings.h"
 
 using Catch::Matchers::WithinAbs;
 typedef std::numeric_limits<float> flt;
 typedef std::numeric_limits<double> dbl;
 
-using namespace bdsp::maps;
+using namespace bdsp::mappings;
 
-TEST_CASE("Linear maps", "[maps]")
+TEST_CASE("Linear mappings", "[mappings]")
 {
     SECTION("Linear map")
     {
-        // Some double maps
+        // Some double mappings
         REQUIRE_THAT(map_linear(0.5, -1.0, 1.0, -2.0, 2.0), WithinAbs(1.0, dbl::min()));
         REQUIRE_THAT(map_linear(0.5, 2.0, -2.0, -2.0, 2.0), WithinAbs(-0.5, dbl::min()));
 
-        // Some float maps
+        // Some float mappings
         REQUIRE_THAT(map_linear(0.5f, -1.0f, 1.0f, -2.0f, 2.0f), WithinAbs(1.0f, flt::min()));
         REQUIRE_THAT(map_linear(0.5f, 2.0f, -2.0f, -2.0f, 2.0f), WithinAbs(-0.5f, flt::min()));
     }
     SECTION("Normalized linear map")
     {
-        // Some double maps
-        REQUIRE_THAT(map_linear_norm_pos(0.5, -1.0, 1.0), WithinAbs(0.0, dbl::min()));
-        REQUIRE_THAT(map_linear_norm_pos(0.75, 1.0, -1.0), WithinAbs(-0.5, dbl::min()));
+        // Some double mappings
+        REQUIRE_THAT(map_linear_norm(0.5, -1.0, 1.0), WithinAbs(0.0, dbl::min()));
+        REQUIRE_THAT(map_linear_norm(0.75, 1.0, -1.0), WithinAbs(-0.5, dbl::min()));
 
-        // Some float maps
-        REQUIRE_THAT(map_linear_norm_pos(0.5f, -1.0f, 1.0f), WithinAbs(0.0f, flt::min()));
-        REQUIRE_THAT(map_linear_norm_pos(0.75f, 1.0f, -1.0f), WithinAbs(-0.5f, flt::min()));
+        // Some float mappings
+        REQUIRE_THAT(map_linear_norm(0.5f, -1.0f, 1.0f), WithinAbs(0.0f, flt::min()));
+        REQUIRE_THAT(map_linear_norm(0.75f, 1.0f, -1.0f), WithinAbs(-0.5f, flt::min()));
     }
 }
 
-TEST_CASE("Signal polarity conversions", "[maps]")
+TEST_CASE("Signal polarity conversions", "[mappings]")
 {
 
     SECTION("Unipolar to bipolar conversion")

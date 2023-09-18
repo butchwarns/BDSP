@@ -1,12 +1,12 @@
-#ifndef __MAPS_H__
-#define __MAPS_H__
+#ifndef __MAPPINGS_H__
+#define __MAPPINGS_H__
 
 #include "consts.h"
 #include <cmath>
 
 namespace bdsp
 {
-    namespace maps
+    namespace mappings
     {
         /**
          * @brief Maps a bipolar normalized value (-1.0 to 1.0) to a given output range
@@ -25,7 +25,7 @@ namespace bdsp
         }
 
         /**
-         * @brief Maps a normalized positive value (0.0 to 1.0) to a given output range
+         * @brief Maps a positive normalized value (0.0 to 1.0) to a given output range
          *        The "lo" bound can be higher than the "hi" bound
          *
          * @tparam T floating-point type
@@ -99,7 +99,7 @@ namespace bdsp
         template <typename T>
         inline T unipolar_to_bipolar(T x)
         {
-            return map_linear_norm_pos<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0));
+            return map_linear_norm<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0));
         }
 
         /**
@@ -126,7 +126,7 @@ namespace bdsp
          * @param skew Skew factor
          * @return Mapped value
          */
-        inline float skew_norm_pos(float val, float skew)
+        inline float skew_norm(float val, float skew)
         {
             return powf(val, 1.0f / skew);
         }
@@ -142,7 +142,7 @@ namespace bdsp
          * @param skew Skew factor
          * @return Mapped value
          */
-        inline double skew_norm_pos(double val, double skew)
+        inline double skew_norm(double val, double skew)
         {
             return pow(val, 1.0 / skew);
         }
@@ -164,7 +164,7 @@ namespace bdsp
             return wa;
         }
 
-    } // maps
-} // bdsp
+    } // namespace mappings
+} // namespace bdsp
 
-#endif // __MAPS_H__
+#endif // __MAPPINGS_H__

@@ -46,7 +46,7 @@ namespace bdsp
         void LP1_RC_TPT::set_cutoff_prewarp(double cutoff)
         {
             // Calculate gamma from prewarped cutoff
-            const double w_prewarped = maps::prewarp(cutoff, sample_rate);
+            const double w_prewarped = mappings::prewarp(cutoff, sample_rate);
             const double g = w_prewarped / (2.0 * sample_rate);
             g1 = g / (1.0 + g);
         }

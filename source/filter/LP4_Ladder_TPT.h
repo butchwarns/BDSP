@@ -1,7 +1,7 @@
 #ifndef __LP4_LADDER_TPT_H__
 #define __LP4_LADDER_TPT_H__
 
-#include "../maps.h"
+#include "../mappings.h"
 #include "LP1_RC_TPT.h"
 
 namespace bdsp

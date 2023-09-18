@@ -2,7 +2,7 @@
 #define __OSC_WAVETABLE_H__
 
 #include "../../tables/wavetables/sine4096.h"
-#include "../maps.h"
+#include "../mappings.h"
 
 namespace bdsp
 {

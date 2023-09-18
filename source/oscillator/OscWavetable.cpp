@@ -69,7 +69,7 @@ namespace bdsp
             const float x1 = wavetable[idx1];
 
             // Interpolate to find output
-            const float y = bdsp::maps::map_linear_norm_pos(idx_frac, x0, x1);
+            const float y = bdsp::mappings::map_linear_norm(idx_frac, x0, x1);
 
             return y;
         }

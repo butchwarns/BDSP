@@ -10,7 +10,7 @@ set(SRC_TESTS
     source/test_tests.cpp
     source/test_decibel.cpp
     source/test_util.cpp
-    source/test_maps.cpp)
+    source/test_mappings.cpp)
 
 set(SRC_BENCHMARKS )
 
