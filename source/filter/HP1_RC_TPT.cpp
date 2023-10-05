@@ -32,7 +32,7 @@ namespace bdsp::filter
     void HP1_RC_TPT::set_cutoff(double cutoff)
     {
         // Calculate gamma from cutoff
-        const double w = bdsp::consts::TWO_PI * cutoff;
+        const double w = bdsp::constants::TWO_PI * cutoff;
         const double g = w / (2.0 * sample_rate);
         g1 = g / (1.0 + g);
     }

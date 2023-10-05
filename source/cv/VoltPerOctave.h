@@ -1,7 +1,7 @@
 #ifndef VOLT_PER_OCTAVE_H
 #define VOLT_PER_OCTAVE_H
 
-#include "constants.h"
+#include "../constants.h"
 
 namespace bdsp::cv
 {

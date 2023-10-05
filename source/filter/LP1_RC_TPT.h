@@ -22,7 +22,7 @@ namespace bdsp
             void set_cutoff_prewarp(double cutoff);
             void set_cutoff_g1(double _g1);
 
-            float get_state();
+            double get_state() const;
 
         private:
             double sample_rate;
