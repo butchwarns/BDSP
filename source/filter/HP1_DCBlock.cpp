@@ -1,43 +1,37 @@
 #include "HP1_DCBlock.h"
 
-namespace bdsp
+namespace bdsp::filter
 {
-    namespace filter
+
+    HP1_DCBlock::HP1_DCBlock()
+        : sample_rate(48000),
+          xz1(0.0),
+          yz1(0.0),
+          a(0.0),
+          b(0.0)
     {
+    }
 
-        HP1_DCBlock::HP1_DCBlock()
-            : sample_rate(48000),
-              xz1(0.0),
-              yz1(0.0),
-              a(0.0),
-              b(0.0)
-        {
-        }
+    void HP1_DCBlock::reset(double _sample_rate)
+    {
+        xz1 = 0.0;
+        yz1 = 0.0;
 
-        HP1_DCBlock::~HP1_DCBlock()
-        {
-        }
+        sample_rate = _sample_rate;
 
-        void HP1_DCBlock::reset(double _sample_rate)
-        {
-            xz1 = 0.0;
-            yz1 = 0.0;
+        const double wc = 0.0015 * 44100.0 / sample_rate;
+        a = 1.0 - wc / 2.0;
+        b = 1.0 - wc;
+    }
 
-            sample_rate = _sample_rate;
+    double HP1_DCBlock::process(double x)
+    {
+        const double y = a * (x - xz1) + b * yz1;
 
-            const double wc = 0.0015 * 44100.0 / sample_rate;
-            a = 1.0 - wc / 2.0;
-            b = 1.0 - wc;
-        }
+        xz1 = x;
+        yz1 = y;
 
-        double HP1_DCBlock::process(double x)
-        {
-            const double y = a * (x - xz1) + b * yz1;
-            xz1 = x;
-            yz1 = y;
+        return y;
+    }
 
-            return y;
-        }
-
-    } // namespace filter
-} // namespace bdsp
+} // namespace bdsp::filter
