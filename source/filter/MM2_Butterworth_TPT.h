@@ -1,36 +1,37 @@
 #ifndef LP2_SALLEN_KEY_TPT_H
 #define LP2_SALLEN_KEY_TPT_H
 
-#include "LP1_RC_TPT.h"
-
 namespace bdsp::filter
 {
+    struct MM2_Butterworth_TPT_Output
+    {
+        double hp;
+        double lp;
+        double bp;
+    };
 
-    class LP2_SallenKey_TPT
+    class MM2_Butterworth_TPT
     {
     public:
-        LP2_SallenKey_TPT();
-        ~LP2_SallenKey_TPT() = default;
+        MM2_Butterworth_TPT();
+        ~MM2_Butterworth_TPT() = default;
 
         void reset(double _sample_rate);
-
-        double process(double x);
-
         void set_cutoff(double cutoff);
-        void set_q(double q_norm);
+        MM2_Butterworth_TPT_Output process(double x);
 
     private:
-        LP1_RC_TPT lp[2];
-
         double sample_rate;
 
         // Intermediate values for calculations
         // (hold info about cutoff)
         double g;
-        double g2mg;
-        double gm1;
+        double g1;
+        double d;
 
-        double k; // Feedback coefficient
+        // State variables
+        double s1;
+        double s2;
     };
 
 } // namespace bdsp::filter
