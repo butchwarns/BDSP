@@ -47,8 +47,7 @@ namespace bdsp::filter
     void MM2_Butterworth_TPT::set_cutoff(double cutoff)
     {
         // Prewarp
-        const double cutoff_prewarped = bdsp::mappings::prewarp(cutoff, sample_rate);
-        const double wc = constants::TWO_PI * cutoff_prewarped;
+        const double wc = bdsp::mappings::prewarp(cutoff, sample_rate);
 
         g = wc / (2.0 * sample_rate);
 
