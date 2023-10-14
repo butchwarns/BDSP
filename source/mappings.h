@@ -11,15 +11,15 @@ namespace bdsp::mappings
      *        The "lo" bound can be higher than the "hi" bound
      *
      * @tparam T floating-point type
-     * @param norm_val
+     * @param val_norm
      * @param out_lo
      * @param out_hi
      * @return T
      */
     template <typename T>
-    inline T map_linear_norm_bipolar(const T norm_val, const T out_lo, const T out_hi)
+    inline T map_linear_norm_bipolar(const T val_norm, const T out_lo, const T out_hi)
     {
-        return (norm_val + static_cast<T>(1.0)) / static_cast<T>(2.0) * (out_hi - out_lo) + out_lo;
+        return (val_norm + static_cast<T>(1.0)) / static_cast<T>(2.0) * (out_hi - out_lo) + out_lo;
     }
 
     /**
@@ -27,15 +27,15 @@ namespace bdsp::mappings
      *        The "lo" bound can be higher than the "hi" bound
      *
      * @tparam T floating-point type
-     * @param norm_val
+     * @param val_norm
      * @param out_lo
      * @param out_hi
      * @return T
      */
     template <typename T>
-    inline T map_linear_norm(const T norm_val, const T out_lo, const T out_hi)
+    inline T map_linear_norm(const T val_norm, const T out_lo, const T out_hi)
     {
-        return norm_val * (out_hi - out_lo) + out_lo;
+        return val_norm * (out_hi - out_lo) + out_lo;
     }
 
     /**
@@ -157,7 +157,7 @@ namespace bdsp::mappings
     inline float prewarp(const float freq, const float sample_rate)
     {
         const float wd = (float)constants::TWO_PI * freq;
-        const float wa = 2.0 * sample_rate * tanf(wd / (2.0 * sample_rate));
+        const float wa = 2.0f * sample_rate * tanf(wd / (2.0f * sample_rate));
 
         return wa;
     }
