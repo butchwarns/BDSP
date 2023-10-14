@@ -28,7 +28,7 @@ namespace bdsp::utility
      *
      * @param d double value to be checked for possible underflow
      */
-    inline void fixUnderflow(double &d)
+    inline void fix_underflow(double &d)
     {
         // Positive underflow
         const bool underflow_positive = d > 0.0 && d < flt::min();
