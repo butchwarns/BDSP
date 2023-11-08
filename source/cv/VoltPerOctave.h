@@ -7,24 +7,27 @@ namespace bdsp::cv
 {
 
     // Default tune to standard +-5V CV / 10 ocatve range
-    const float ZERO_VOLT_FREQ_DEFAULT = (float)constants::MIN_FILTER_FREQ * powf(2.0f, 5.0f);
+    const double ZERO_VOLT_FREQ_DEFAULT = constants::MIN_FILTER_FREQ * pow(2.0, 5.0);
 
+    template <typename FloatType>
     class VoltPerOctave
     {
     public:
         VoltPerOctave();
-        explicit VoltPerOctave(float _zero_volt_freq);
+        explicit VoltPerOctave(FloatType _zero_volt_freq);
         ~VoltPerOctave() = default;
 
-        void tune(float _zero_volt_freq);
+        void tune(FloatType _zero_volt_freq);
 
-        float volt_to_freq(float volt) const;
-        float freq_to_volt(float freq) const;
+        FloatType volt_to_freq(FloatType volt) const;
+        FloatType freq_to_volt(FloatType freq) const;
         static float volt_to_freq(float volt, float zero_volt_freq);
+        static double volt_to_freq(double volt, double zero_volt_freq);
         static float freq_to_volt(float freq, float zero_volt_freq);
+        static double freq_to_volt(double freq, double zero_volt_freq);
 
     private:
-        float zero_volt_freq;
+        FloatType zero_volt_freq;
     };
 
 } // namespace bdsp::cv
