@@ -3,29 +3,34 @@
 namespace bdsp::smoother
 {
 
-    SmootherLinear::SmootherLinear()
+    template <typename FloatType>
+    SmootherLinear<FloatType>::SmootherLinear()
         : sample_rate(1.0), num_frames(1.0f), target_val(0.0f), state(0.0f), delta(0.0f)
     {
     }
 
-    void SmootherLinear::reset(double _sample_rate)
+    template <typename FloatType>
+    void SmootherLinear<FloatType>::reset(FloatType _sample_rate)
     {
         state = 0.0;
         sample_rate = _sample_rate;
     }
 
-    void SmootherLinear::set_time_constant(float time_constant)
+    template <typename FloatType>
+    void SmootherLinear<FloatType>::set_time_constant(FloatType time_constant)
     {
-        num_frames = time_constant * (float)sample_rate;
+        num_frames = time_constant * sample_rate;
     }
 
-    void SmootherLinear::set_target_val(float _target_val)
+    template <typename FloatType>
+    void SmootherLinear<FloatType>::set_target_val(FloatType _target_val)
     {
         target_val = _target_val;
         delta = (target_val - state) / num_frames;
     }
 
-    float SmootherLinear::next()
+    template <typename FloatType>
+    FloatType SmootherLinear<FloatType>::next()
     {
         // Rising
         if (delta >= 0.0f)
@@ -47,5 +52,8 @@ namespace bdsp::smoother
         state += delta;
         return state;
     }
+
+    template class SmootherLinear<float>;
+    template class SmootherLinear<double>;
 
 } // namespace bdsp::smoother

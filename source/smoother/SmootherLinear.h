@@ -1,30 +1,30 @@
 #ifndef SMOOTHER_LINEAR
 #define SMOOTHER_LINEAR
 
-namespace bdsp::smoother{
-
-class SmootherLinear
+namespace bdsp::smoother
 {
-public:
-    SmootherLinear();
-    ~SmootherLinear() = default;
 
-    void reset(double _sample_rate);
-    void set_time_constant(float time_constant);
+    template <typename FloatType>
+    class SmootherLinear
+    {
+    public:
+        SmootherLinear();
+        ~SmootherLinear() = default;
 
-    void set_target_val(float _target_val);
-    float next();
+        void reset(FloatType _sample_rate);
+        void set_time_constant(FloatType time_constant);
 
-private:
-    double sample_rate;
-    float num_frames;
-    float target_val;
-    float state;
-    float delta;
+        void set_target_val(FloatType _target_val);
+        FloatType next();
 
-};
+    private:
+        FloatType sample_rate;
+        FloatType num_frames;
+        FloatType target_val;
+        FloatType state;
+        FloatType delta;
+    };
 
 } // namespace bdsp::smoother
-
 
 #endif // SMOOTHER_LINEAR
