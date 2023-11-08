@@ -11,15 +11,15 @@ namespace bdsp::filter
         ~HP1_DCBlock() = default;
 
         void reset(double _sample_rate);
+        void set_cutoff(double frequency);
 
         double process(double x);
 
     private:
         double sample_rate;
+        double R;   // Constant holding information about cutoff frequency
         double xz1; // Input state register
         double yz1; // Output state register
-        double a;   // Coefficient feed-forward
-        double b;   // Coefficient feed-back
     };
 
 } // namespace bdsp::filter
