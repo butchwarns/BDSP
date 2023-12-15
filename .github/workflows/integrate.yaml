@@ -23,6 +23,7 @@ jobs:
 
       - name: "Test"
         run: |
+          echo -e "\nRunning tests...\n"
           cd tests/build
           ctest
         shell: bash
