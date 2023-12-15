@@ -4,8 +4,8 @@
 scriptdir="$(dirname "$0")"
 cd "$scriptdir"
 
-echo "\nRunning cmake...\n"
+echo -e "\nRunning cmake...\n"
 cmake .. -GUnix\ Makefiles -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release
 
-echo "\nBuilding tests...\n"
+echo -e "\nBuilding tests...\n"
 cmake --build .
