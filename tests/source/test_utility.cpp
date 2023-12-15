@@ -20,7 +20,7 @@ TEST_CASE("Float underflow", "[util]")
 
         REQUIRE(((denorm > 0.0f) && (denorm < flt::min())));
 
-        fixUnderflow(under);
+        fix_underflow(under);
         float fixed = static_cast<float>(under);
 
         REQUIRE(fixed == 0.0f);
@@ -32,7 +32,7 @@ TEST_CASE("Float underflow", "[util]")
 
         REQUIRE(((denorm < 0.0f) && (denorm > -flt::min())));
 
-        fixUnderflow(under);
+        fix_underflow(under);
         float fixed = static_cast<float>(under);
 
         REQUIRE(fixed == 0.0f);
