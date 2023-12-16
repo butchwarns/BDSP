@@ -43,7 +43,8 @@ namespace bdsp::filter
 
     void LP2_SallenKey_TPT::set_cutoff(double cutoff)
     {
-        g = cutoff / sample_rate;
+        const double w_prewarped = mappings::prewarp(cutoff, sample_rate);
+        g = w_prewarped / (2.0 * sample_rate);
         const double g1 = g / (1.0 + g);
         g2mg = g1 * g1 - g1;
         gm1 = g1 - 1.0;
