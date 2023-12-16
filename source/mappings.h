@@ -169,7 +169,7 @@ namespace bdsp::mappings
      *
      * @param freq Frequency to be preserved
      * @param sample_rate Sample rate of the system
-     * @return Prewarped frequency
+     * @return Prewarped (angular) frequency
      */
     inline double prewarp(const double freq, const double sample_rate)
     {
