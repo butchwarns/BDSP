@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wavetable_283',['wavetable',['../classbdsp_1_1osc_1_1OscWavetable.html#a55fd227b71a2d05180077331db34a469',1,'bdsp::osc::OscWavetable']]]
+  ['voltage_5fmargin_0',['VOLTAGE_MARGIN',['../classbdsp_1_1envelope_1_1AR.html#ab1b24e22177bbdd124d6517ea21be3e0',1,'bdsp::envelope::AR']]]
 ];

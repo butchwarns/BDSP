@@ -1,11 +1,15 @@
 var searchData=
 [
-  ['tanh2_5ffast_109',['tanh2_fast',['../namespacebdsp_1_1wshaper.html#a5b2f382842088750183d3928cff12bdf',1,'bdsp::wshaper']]],
-  ['tanh_5fsat_110',['tanh_sat',['../namespacebdsp_1_1wshaper.html#ac96f819711c78b8361ecc20564b414ed',1,'bdsp::wshaper']]],
-  ['time_111',['time',['../classbdsp_1_1env_1_1EnvAR.html#a1c47b5db3f229259fd20ad6975a25533',1,'bdsp::env::EnvAR']]],
-  ['transition_5fstate_112',['transition_state',['../classbdsp_1_1env_1_1EnvAR.html#adb34e0ab3fd5e775efa80451b6a9ddca',1,'bdsp::env::EnvAR']]],
-  ['trigger_113',['trigger',['../classbdsp_1_1env_1_1EnvAR.html#ad8cf94e1a0ecb43314c2691ef36e0bf2',1,'bdsp::env::EnvAR']]],
-  ['tune_114',['tune',['../classbdsp_1_1cv_1_1VoltPerOct.html#a26741f4ad559115a4738ef2ac4bacc26',1,'bdsp::cv::VoltPerOct']]],
-  ['two_5fpi_115',['TWO_PI',['../namespacebdsp_1_1consts.html#a4e558444203d927ffd467a7c5f05a09c',1,'bdsp::consts::TWO_PI()'],['../namespacebdsp_1_1util.html#a95aeb376267a3d0d1680901db568869f',1,'bdsp::util::TWO_PI()']]],
-  ['two_5fstage_5fquad_116',['two_stage_quad',['../namespacebdsp_1_1wshaper.html#a003ae325944a02626e20341c588fffe3',1,'bdsp::wshaper']]]
+  ['table_5flen_0',['table_len',['../classbdsp_1_1oscillator_1_1OscWavetable.html#a40efbe6fb6d6023c255128402a1a5b79',1,'bdsp::oscillator::OscWavetable']]],
+  ['tanh2_5ffast_1',['tanh2_fast',['../namespacebdsp_1_1waveshaper.html#af05aae25d1083829a8ce9ce1a6dd4595',1,'bdsp::waveshaper']]],
+  ['tanh_5fsat_2',['tanh_sat',['../namespacebdsp_1_1waveshaper.html#a199d0c44d83b24d59ec753b99ff51589',1,'bdsp::waveshaper']]],
+  ['target_5fval_3',['target_val',['../classbdsp_1_1smoother_1_1SmootherLinear.html#a675ffc79a969b3079d45211dbb43d2a4',1,'bdsp::smoother::SmootherLinear']]],
+  ['time_4',['time',['../classbdsp_1_1envelope_1_1AR.html#a3fc7693dad98d4265bb3a4241f07838b',1,'bdsp::envelope::AR']]],
+  ['transition_5fstate_5',['transition_state',['../classbdsp_1_1envelope_1_1AR.html#aa0a3c871ea870b888bf918c9f5488c04',1,'bdsp::envelope::AR']]],
+  ['transposed_5fcanonical_6',['TRANSPOSED_CANONICAL',['../namespacebdsp_1_1filter.html#a5c8cff632a92bc532b4722831738a1bba506cff178f7065251bc36eb47d1e756d',1,'bdsp::filter']]],
+  ['transposed_5fdirect_7',['TRANSPOSED_DIRECT',['../namespacebdsp_1_1filter.html#a5c8cff632a92bc532b4722831738a1bbad3e83c3237355f0e0c0e6092f86b9e16',1,'bdsp::filter']]],
+  ['trigger_8',['trigger',['../classbdsp_1_1envelope_1_1AR.html#a661664b48526843135fda6d2aeb90e6d',1,'bdsp::envelope::AR']]],
+  ['tune_9',['tune',['../classbdsp_1_1cv_1_1VoltPerOctave.html#ac49baf49dfee0f1fb9844f172ed20944',1,'bdsp::cv::VoltPerOctave']]],
+  ['two_5fpi_10',['TWO_PI',['../namespacebdsp_1_1constants.html#a95a6657e72f5faadfc0f040c1c44e4fa',1,'bdsp::constants']]],
+  ['two_5fstage_5fquad_11',['two_stage_quad',['../namespacebdsp_1_1waveshaper.html#aba1cdf65853ef4f5c34626a619ebb701',1,'bdsp::waveshaper']]]
 ];

@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['lp1_5frc_5ftpt_2ecpp_175',['LP1_RC_TPT.cpp',['../LP1__RC__TPT_8cpp.html',1,'']]],
-  ['lp1_5frc_5ftpt_2eh_176',['LP1_RC_TPT.h',['../LP1__RC__TPT_8h.html',1,'']]],
-  ['lp2_5fsallenkey_5ftpt_2ecpp_177',['LP2_SallenKey_TPT.cpp',['../LP2__SallenKey__TPT_8cpp.html',1,'']]],
-  ['lp2_5fsallenkey_5ftpt_2eh_178',['LP2_SallenKey_TPT.h',['../LP2__SallenKey__TPT_8h.html',1,'']]],
-  ['lp4_5fladder_5ftpt_2ecpp_179',['LP4_Ladder_TPT.cpp',['../LP4__Ladder__TPT_8cpp.html',1,'']]],
-  ['lp4_5fladder_5ftpt_2eh_180',['LP4_Ladder_TPT.h',['../LP4__Ladder__TPT_8h.html',1,'']]]
+  ['hp1_5fdcblock_2ecpp_0',['HP1_DCBlock.cpp',['../HP1__DCBlock_8cpp.html',1,'']]],
+  ['hp1_5fdcblock_2eh_1',['HP1_DCBlock.h',['../HP1__DCBlock_8h.html',1,'']]],
+  ['hp1_5frc_5ftpt_2ecpp_2',['HP1_RC_TPT.cpp',['../HP1__RC__TPT_8cpp.html',1,'']]],
+  ['hp1_5frc_5ftpt_2eh_3',['HP1_RC_TPT.h',['../HP1__RC__TPT_8h.html',1,'']]]
 ];

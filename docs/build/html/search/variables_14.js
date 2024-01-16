@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zero_5ffreq_286',['zero_freq',['../classbdsp_1_1cv_1_1VoltPerOct.html#af4f13e606af476921b73fc0897baafb3',1,'bdsp::cv::VoltPerOct']]]
+  ['yz1_0',['yz1',['../classbdsp_1_1filter_1_1HP1__DCBlock.html#a20de4c634b8de6f18e34fae7f34b454f',1,'bdsp::filter::HP1_DCBlock']]]
 ];

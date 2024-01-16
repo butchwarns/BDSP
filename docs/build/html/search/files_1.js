@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['decibel_2eh_164',['decibel.h',['../decibel_8h.html',1,'']]]
+  ['biquad_2ecpp_0',['Biquad.cpp',['../Biquad_8cpp.html',1,'']]],
+  ['biquad_2eh_1',['Biquad.h',['../Biquad_8h.html',1,'']]]
 ];

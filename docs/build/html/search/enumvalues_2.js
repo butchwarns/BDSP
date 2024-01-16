@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['release_291',['RELEASE',['../classbdsp_1_1env_1_1EnvAR.html#a9935fc380f87f1dfcf9399b92d982fa9a7d649ef069df9885e382417c79f3d5cd',1,'bdsp::env::EnvAR']]]
+  ['canonical_0',['CANONICAL',['../namespacebdsp_1_1filter.html#a5c8cff632a92bc532b4722831738a1bba4492c705a7c1eba760dda71569863667',1,'bdsp::filter']]]
 ];

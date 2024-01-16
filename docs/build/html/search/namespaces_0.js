@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['bdsp_153',['bdsp',['../namespacebdsp.html',1,'']]],
-  ['consts_154',['consts',['../namespacebdsp_1_1consts.html',1,'bdsp']]],
-  ['cv_155',['cv',['../namespacebdsp_1_1cv.html',1,'bdsp']]],
-  ['decibel_156',['decibel',['../namespacebdsp_1_1decibel.html',1,'bdsp']]],
-  ['env_157',['env',['../namespacebdsp_1_1env.html',1,'bdsp']]],
-  ['filter_158',['filter',['../namespacebdsp_1_1filter.html',1,'bdsp']]],
-  ['maps_159',['maps',['../namespacebdsp_1_1maps.html',1,'bdsp']]],
-  ['osc_160',['osc',['../namespacebdsp_1_1osc.html',1,'bdsp']]],
-  ['util_161',['util',['../namespacebdsp_1_1util.html',1,'bdsp']]],
-  ['wshaper_162',['wshaper',['../namespacebdsp_1_1wshaper.html',1,'bdsp']]]
+  ['bdsp_0',['bdsp',['../namespacebdsp.html',1,'']]],
+  ['bdsp_3a_3aconstants_1',['constants',['../namespacebdsp_1_1constants.html',1,'bdsp']]],
+  ['bdsp_3a_3acv_2',['cv',['../namespacebdsp_1_1cv.html',1,'bdsp']]],
+  ['bdsp_3a_3adecibel_3',['decibel',['../namespacebdsp_1_1decibel.html',1,'bdsp']]],
+  ['bdsp_3a_3aenvelope_4',['envelope',['../namespacebdsp_1_1envelope.html',1,'bdsp']]],
+  ['bdsp_3a_3afilter_5',['filter',['../namespacebdsp_1_1filter.html',1,'bdsp']]],
+  ['bdsp_3a_3amappings_6',['mappings',['../namespacebdsp_1_1mappings.html',1,'bdsp']]],
+  ['bdsp_3a_3aoscillator_7',['oscillator',['../namespacebdsp_1_1oscillator.html',1,'bdsp']]],
+  ['bdsp_3a_3asmoother_8',['smoother',['../namespacebdsp_1_1smoother.html',1,'bdsp']]],
+  ['bdsp_3a_3autility_9',['utility',['../namespacebdsp_1_1utility.html',1,'bdsp']]],
+  ['bdsp_3a_3awaveshaper_10',['waveshaper',['../namespacebdsp_1_1waveshaper.html',1,'bdsp']]]
 ];

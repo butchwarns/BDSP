@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['fixunderflow_33',['fixUnderflow',['../namespacebdsp_1_1util.html#a173ebf5e27511ce5108f68ef1be854bf',1,'bdsp::util']]],
-  ['flt_34',['flt',['../util_8h.html#acf65be386ceba039f48242a32e5ac6aa',1,'util.h']]],
-  ['freq_35',['freq',['../classbdsp_1_1osc_1_1OscWavetable.html#aa2cbe14fbc38e2b5b81b74265284e453',1,'bdsp::osc::OscWavetable']]]
+  ['fix_5funderflow_0',['fix_underflow',['../namespacebdsp_1_1utility.html#a984fdfc4cc93d738f4f79e8105feee24',1,'bdsp::utility']]],
+  ['flt_1',['flt',['../utility_8h.html#acf65be386ceba039f48242a32e5ac6aa',1,'utility.h']]],
+  ['freq_2',['freq',['../classbdsp_1_1oscillator_1_1OscWavetable.html#acb403f04faefa776014e2b13f00143dc',1,'bdsp::oscillator::OscWavetable']]],
+  ['freq_5fto_5fvolt_3',['freq_to_volt',['../classbdsp_1_1cv_1_1VoltPerOctave.html#a161423dca436640deb5c00055206e5f4',1,'bdsp::cv::VoltPerOctave::freq_to_volt(FloatType freq) const'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#abd99e62fdf79c711c1bd42dca043aa85',1,'bdsp::cv::VoltPerOctave::freq_to_volt(float freq, float zero_volt_freq)'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#aa622826ec68ce3908ee75e574150215f',1,'bdsp::cv::VoltPerOctave::freq_to_volt(double freq, double zero_volt_freq)'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#a7608227c5d35e6958498b3c5308f1d48',1,'bdsp::cv::VoltPerOctave::freq_to_volt(float freq) const'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#ab8e52498c12d230a89f54430a5fc6ebb',1,'bdsp::cv::VoltPerOctave::freq_to_volt(double freq) const'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#a273adb3450a332f2e2024483698eb7be',1,'bdsp::cv::VoltPerOctave::freq_to_volt(float freq, float zero_volt_freq)'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#af357234ea39e83252f00a31dd9bf08a2',1,'bdsp::cv::VoltPerOctave::freq_to_volt(double freq, double zero_volt_freq)']]]
 ];
