@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 project(bdsp_tests VERSION 0.1.0)
 
-
 add_subdirectory(Catch2)                  
 list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
 include(Catch)
