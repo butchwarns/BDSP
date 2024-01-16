@@ -1,29 +1,27 @@
-#ifndef __HP1_DC_BLOCK_H__
-#define __HP1_DC_BLOCK_H__
+#ifndef HP1_DC_BLOCK_H
+#define HP1_DC_BLOCK_H
 
-namespace bdsp
+namespace bdsp::filter
 {
-    namespace filter
+
+    class HP1_DCBlock
     {
-        class HP1_DCBlock
-        {
-        public:
-            HP1_DCBlock();
-            ~HP1_DCBlock();
+    public:
+        HP1_DCBlock();
+        ~HP1_DCBlock() = default;
 
-            void reset(double _sample_rate);
+        void reset(double _sample_rate);
+        void set_cutoff(double frequency);
 
-            double process(double x);
+        double process(double x);
 
-        private:
-            double sample_rate;
-            double xz1; // Input state register
-            double yz1; // Output state register
-            double a;   // Filter coeff feed-forward
-            double b;   // Filter coeff feed-back
-        };
+    private:
+        double sample_rate;
+        double R;   // Constant holding information about cutoff frequency
+        double xz1; // Input state register
+        double yz1; // Output state register
+    };
 
-    } // namespace filter
-} // namespace bdsp
+} // namespace bdsp::filter
 
-#endif // __HP1_DC_BLOCK_H__
+#endif // HP1_DC_BLOCK_H

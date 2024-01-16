@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['hp_266',['hp',['../classbdsp_1_1filter_1_1HP2__SallenKey__TPT.html#a5be971d985642d83c6527c7d9e7354de',1,'bdsp::filter::HP2_SallenKey_TPT::hp()'],['../classbdsp_1_1filter_1_1HP4__Ladder__TPT.html#a60078a18fc63a988b2b6518284a68cb5',1,'bdsp::filter::HP4_Ladder_TPT::hp()'],['../structbdsp_1_1filter_1_1MM1__RC__TPT__Output.html#ae60ee1c41531a6ef3053c2c49bee88cf',1,'bdsp::filter::MM1_RC_TPT_Output::hp()']]]
+  ['idx_0',['idx',['../classbdsp_1_1oscillator_1_1OscWavetable.html#accabf22b417b62b740b80db1432173a4',1,'bdsp::oscillator::OscWavetable']]],
+  ['index_5fwrite_1',['index_write',['../classbdsp_1_1CircularBuffer.html#a5dc0d347e5da7c90e19c7d2a2f3707f5',1,'bdsp::CircularBuffer']]],
+  ['is_5ftriggered_2',['is_triggered',['../classbdsp_1_1envelope_1_1AR.html#a59f4c85212f718a96903b2ec8057c4e0',1,'bdsp::envelope::AR']]]
 ];

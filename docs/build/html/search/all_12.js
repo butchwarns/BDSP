@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['volt_5fto_5ffreq_120',['volt_to_freq',['../classbdsp_1_1cv_1_1VoltPerOct.html#a45e256eb108c0c84eb1a462b407f3e8e',1,'bdsp::cv::VoltPerOct']]],
-  ['voltage_5fmargin_121',['VOLTAGE_MARGIN',['../classbdsp_1_1env_1_1EnvAR.html#a566780a0d9afbeaf8ac8f38443dbb4eb',1,'bdsp::env::EnvAR']]],
-  ['voltperoct_122',['VoltPerOct',['../classbdsp_1_1cv_1_1VoltPerOct.html',1,'bdsp::cv::VoltPerOct'],['../classbdsp_1_1cv_1_1VoltPerOct.html#ab4045a7e94b5fe627ff258e7339353a1',1,'bdsp::cv::VoltPerOct::VoltPerOct()'],['../classbdsp_1_1cv_1_1VoltPerOct.html#a7d294a2831237bd0af87ee1bff770b5d',1,'bdsp::cv::VoltPerOct::VoltPerOct(float _zero_freq)']]],
-  ['voltperoct_2ecpp_123',['VoltPerOct.cpp',['../VoltPerOct_8cpp.html',1,'']]],
-  ['voltperoct_2eh_124',['VoltPerOct.h',['../VoltPerOct_8h.html',1,'']]]
+  ['volt_5fto_5ffreq_0',['volt_to_freq',['../classbdsp_1_1cv_1_1VoltPerOctave.html#ac7757f51c0b77fa6def378170211d6be',1,'bdsp::cv::VoltPerOctave::volt_to_freq(FloatType volt) const'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#ae03d2dad0c2d0b4f72735f216cd523f1',1,'bdsp::cv::VoltPerOctave::volt_to_freq(float volt, float zero_volt_freq)'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#a25e5715b72cb740dd79639d578a8eb32',1,'bdsp::cv::VoltPerOctave::volt_to_freq(double volt, double zero_volt_freq)'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#a023259dac52b6d64c26789d83c499fc5',1,'bdsp::cv::VoltPerOctave::volt_to_freq(float volt) const'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#ad1cc0944b59d60ad61a1f8f5529888cb',1,'bdsp::cv::VoltPerOctave::volt_to_freq(double volt) const'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#a97bb75a15ed67bb06400c933f64c1f23',1,'bdsp::cv::VoltPerOctave::volt_to_freq(float volt, float zero_volt_freq)'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#a33a6c3d500ef5c9818b586e14b29baee',1,'bdsp::cv::VoltPerOctave::volt_to_freq(double volt, double zero_volt_freq)']]],
+  ['voltage_5fmargin_1',['VOLTAGE_MARGIN',['../classbdsp_1_1envelope_1_1AR.html#ab1b24e22177bbdd124d6517ea21be3e0',1,'bdsp::envelope::AR']]],
+  ['voltperoctave_2',['VoltPerOctave',['../classbdsp_1_1cv_1_1VoltPerOctave.html',1,'bdsp::cv::VoltPerOctave&lt; FloatType &gt;'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#a42ae442dfef494a6ec43b16a787b0d32',1,'bdsp::cv::VoltPerOctave::VoltPerOctave()'],['../classbdsp_1_1cv_1_1VoltPerOctave.html#a57a5bda349f13ad81011ce3b8a93fe65',1,'bdsp::cv::VoltPerOctave::VoltPerOctave(FloatType _zero_volt_freq)']]],
+  ['voltperoctave_2ecpp_3',['VoltPerOctave.cpp',['../VoltPerOctave_8cpp.html',1,'']]],
+  ['voltperoctave_2eh_4',['VoltPerOctave.h',['../VoltPerOctave_8h.html',1,'']]]
 ];

@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['map_5flinear_72',['map_linear',['../namespacebdsp_1_1maps.html#a9cb79447d2a28401d35d140e3bb2e449',1,'bdsp::maps']]],
-  ['map_5flinear_5fnorm_73',['map_linear_norm',['../namespacebdsp_1_1maps.html#ae9a360fde72ca9644f6fe64cce056be6',1,'bdsp::maps']]],
-  ['map_5flinear_5fnorm_5fpos_74',['map_linear_norm_pos',['../namespacebdsp_1_1maps.html#aefa20262c06f7fb2d773df013c9f8d36',1,'bdsp::maps']]],
-  ['maps_2eh_75',['maps.h',['../maps_8h.html',1,'']]],
-  ['max_5ffilter_5ffreq_76',['MAX_FILTER_FREQ',['../namespacebdsp_1_1consts.html#a4c18f1e281b16c6cb15d489498b94d16',1,'bdsp::consts']]],
-  ['min_5ffilter_5ffreq_77',['MIN_FILTER_FREQ',['../namespacebdsp_1_1consts.html#a8b5d12a9a60de765dc18da7bc9861f23',1,'bdsp::consts']]],
-  ['mm1_5frc_5ftpt_78',['MM1_RC_TPT',['../classbdsp_1_1filter_1_1MM1__RC__TPT.html',1,'bdsp::filter::MM1_RC_TPT'],['../classbdsp_1_1filter_1_1MM1__RC__TPT.html#ade17454054a840399c48e2033ae939ae',1,'bdsp::filter::MM1_RC_TPT::MM1_RC_TPT()']]],
-  ['mm1_5frc_5ftpt_2ecpp_79',['MM1_RC_TPT.cpp',['../MM1__RC__TPT_8cpp.html',1,'']]],
-  ['mm1_5frc_5ftpt_2eh_80',['MM1_RC_TPT.h',['../MM1__RC__TPT_8h.html',1,'']]],
-  ['mm1_5frc_5ftpt_5foutput_81',['MM1_RC_TPT_Output',['../structbdsp_1_1filter_1_1MM1__RC__TPT__Output.html',1,'bdsp::filter']]]
+  ['next_0',['next',['../classbdsp_1_1smoother_1_1SmootherLinear.html#ac000fea9b263850d25cb09f6c03f98fa',1,'bdsp::smoother::SmootherLinear']]],
+  ['normalise_1',['normalise',['../namespacebdsp_1_1mappings.html#a6c2ccc43351e2f22ddb1192262a607db',1,'bdsp::mappings']]],
+  ['normalise_5fbipolar_2',['normalise_bipolar',['../namespacebdsp_1_1mappings.html#a9b78fafcfbfa952c3344d60f9e312bc9',1,'bdsp::mappings']]],
+  ['num_5fcoeffs_3',['NUM_COEFFS',['../namespacebdsp_1_1filter.html#a41ff28e94dff6b659f5e982bc98f5da6aed9fdc689ac0c7afa710d33e3a1de0dd',1,'bdsp::filter']]],
+  ['num_5fframes_4',['num_frames',['../classbdsp_1_1smoother_1_1SmootherLinear.html#a249d38f509a8a22dc0f1e7695e75f402',1,'bdsp::smoother::SmootherLinear']]],
+  ['num_5fstate_5fregisters_5',['NUM_STATE_REGISTERS',['../namespacebdsp_1_1filter.html#a153f44a1b9bca4e973f1c07d13dadd34ab4a1f777b8ddd8d84d29a1e2017fe6f5',1,'bdsp::filter']]]
 ];

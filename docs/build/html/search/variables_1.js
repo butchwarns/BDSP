@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['b_253',['b',['../classbdsp_1_1filter_1_1HP1__DCBlock.html#a4dc538e8467a3031c7ea6ca4c1a93f9e',1,'bdsp::filter::HP1_DCBlock']]]
+  ['buffer_0',['buffer',['../classbdsp_1_1CircularBuffer.html#aa722ff148fb5c54db9768b780e4298fa',1,'bdsp::CircularBuffer']]]
 ];

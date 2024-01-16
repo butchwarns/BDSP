@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['envstate_288',['EnvState',['../classbdsp_1_1env_1_1EnvAR.html#a9935fc380f87f1dfcf9399b92d982fa9',1,'bdsp::env::EnvAR']]]
+  ['biquadstructure_0',['BiquadStructure',['../namespacebdsp_1_1filter.html#a5c8cff632a92bc532b4722831738a1bb',1,'bdsp::filter']]]
 ];

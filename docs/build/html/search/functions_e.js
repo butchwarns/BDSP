@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['tanh2_5ffast_230',['tanh2_fast',['../namespacebdsp_1_1wshaper.html#a5b2f382842088750183d3928cff12bdf',1,'bdsp::wshaper']]],
-  ['tanh_5fsat_231',['tanh_sat',['../namespacebdsp_1_1wshaper.html#ac96f819711c78b8361ecc20564b414ed',1,'bdsp::wshaper']]],
-  ['transition_5fstate_232',['transition_state',['../classbdsp_1_1env_1_1EnvAR.html#adb34e0ab3fd5e775efa80451b6a9ddca',1,'bdsp::env::EnvAR']]],
-  ['trigger_233',['trigger',['../classbdsp_1_1env_1_1EnvAR.html#ad8cf94e1a0ecb43314c2691ef36e0bf2',1,'bdsp::env::EnvAR']]],
-  ['tune_234',['tune',['../classbdsp_1_1cv_1_1VoltPerOct.html#a26741f4ad559115a4738ef2ac4bacc26',1,'bdsp::cv::VoltPerOct']]],
-  ['two_5fstage_5fquad_235',['two_stage_quad',['../namespacebdsp_1_1wshaper.html#a003ae325944a02626e20341c588fffe3',1,'bdsp::wshaper']]]
+  ['raw_5fgain_5fto_5fdb_0',['raw_gain_to_db',['../namespacebdsp_1_1decibel.html#a7cfc7f5438152e94a16f0f162e2a5413',1,'bdsp::decibel::raw_gain_to_db(const double raw_gain)'],['../namespacebdsp_1_1decibel.html#a6d5580145cbe4a67125348751de0785c',1,'bdsp::decibel::raw_gain_to_db(const float raw_gain)']]],
+  ['read_1',['read',['../classbdsp_1_1CircularBuffer.html#a2b0c5584794ec47c074a2c632ca892f5',1,'bdsp::CircularBuffer::read(int samples_delay)'],['../classbdsp_1_1CircularBuffer.html#aba68b65a8c28974252655903b0809651',1,'bdsp::CircularBuffer::read(double samples_delay_fractional)']]],
+  ['reset_2',['reset',['../classbdsp_1_1envelope_1_1AR.html#a7758cc4895218101d8bfe6150326fda6',1,'bdsp::envelope::AR::reset()'],['../classbdsp_1_1filter_1_1Biquad.html#aedfc499c953e501f22abe1dfea72feee',1,'bdsp::filter::Biquad::reset()'],['../classbdsp_1_1filter_1_1HP1__DCBlock.html#ae940409d36ffab603719baaa2c8a4e3a',1,'bdsp::filter::HP1_DCBlock::reset()'],['../classbdsp_1_1filter_1_1HP1__RC__TPT.html#a746eb62830ca8216ded8a3d31cfc4c40',1,'bdsp::filter::HP1_RC_TPT::reset()'],['../classbdsp_1_1filter_1_1LP1__RC__TPT.html#a1db2f779fadc0f67b52c7e917f9d0c50',1,'bdsp::filter::LP1_RC_TPT::reset()'],['../classbdsp_1_1filter_1_1MM1__RC__TPT.html#aff8187210d570ce151cf8492306d4949',1,'bdsp::filter::MM1_RC_TPT::reset()'],['../classbdsp_1_1oscillator_1_1OscWavetable.html#aa2e60d76da086d884d26a431a5ac743c',1,'bdsp::oscillator::OscWavetable::reset()'],['../classbdsp_1_1smoother_1_1SmootherLinear.html#afdb1daedf150b6ada8ad1516c9d90e41',1,'bdsp::smoother::SmootherLinear::reset()']]]
 ];

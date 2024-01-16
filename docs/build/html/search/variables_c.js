@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pi_273',['PI',['../namespacebdsp_1_1consts.html#a8ac1f0afa41060d72cb2ecb49d54ed9f',1,'bdsp::consts::PI()'],['../namespacebdsp_1_1util.html#ad56a605df521d32244b76f12621076e8',1,'bdsp::util::PI()']]],
-  ['prev_5foutput_274',['prev_output',['../classbdsp_1_1env_1_1EnvAR.html#a0f6e3745e9416f8ef0160649b9156399',1,'bdsp::env::EnvAR']]]
+  ['peak_5famplitude_0',['PEAK_AMPLITUDE',['../classbdsp_1_1envelope_1_1AR.html#ad573ac2a4fc0d29cc62fdb45694cae77',1,'bdsp::envelope::AR']]],
+  ['pi_1',['PI',['../namespacebdsp_1_1constants.html#abd85e4c6cdce95b45ed944962ee6e4c0',1,'bdsp::constants']]]
 ];

@@ -1,7 +1,7 @@
 #ifndef __LP1_RC_TPT_H__
 #define __LP1_RC_TPT_H__
 
-#include "../maps.h"
+#include "../mappings.h"
 
 namespace bdsp
 {
@@ -22,7 +22,7 @@ namespace bdsp
             void set_cutoff_prewarp(double cutoff);
             void set_cutoff_g1(double _g1);
 
-            float get_state();
+            double get_state() const;
 
         private:
             double sample_rate;

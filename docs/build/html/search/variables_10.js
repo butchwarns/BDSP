@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['voltage_5fmargin_282',['VOLTAGE_MARGIN',['../classbdsp_1_1env_1_1EnvAR.html#a566780a0d9afbeaf8ac8f38443dbb4eb',1,'bdsp::env::EnvAR']]]
+  ['uncorrelated_0',['UNCORRELATED',['../structbdsp_1_1MidSideScalingFactor.html#a2b360d6aff228ecfe669b4534c89c6d2',1,'bdsp::MidSideScalingFactor']]]
 ];
