@@ -58,7 +58,7 @@ namespace bdsp
 
         double fraction = samples_delay_fractional - (int)samples_delay_fractional;
 
-        return mappings::map_linear_norm(fraction, y1, y2);
+        return mappings::linear_norm(fraction, y1, y2);
     }
 
 } // namespace bdsp

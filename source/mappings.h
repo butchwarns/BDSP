@@ -17,7 +17,7 @@ namespace bdsp::mappings
      * @return T
      */
     template <typename T>
-    inline T map_linear_norm_bipolar(const T val_norm, const T out_lo, const T out_hi)
+    inline T linear_norm_bipolar(const T val_norm, const T out_lo, const T out_hi)
     {
         return (val_norm + static_cast<T>(1.0)) / static_cast<T>(2.0) * (out_hi - out_lo) + out_lo;
     }
@@ -33,7 +33,7 @@ namespace bdsp::mappings
      * @return T
      */
     template <typename T>
-    inline T map_linear_norm(const T val_norm, const T out_lo, const T out_hi)
+    inline T linear_norm(const T val_norm, const T out_lo, const T out_hi)
     {
         return val_norm * (out_hi - out_lo) + out_lo;
     }
@@ -51,10 +51,10 @@ namespace bdsp::mappings
      * @return T
      */
     template <typename T>
-    inline T map_linear(const T val, const T in_lo, const T in_hi, const T out_lo, const T out_hi)
+    inline T linear(const T val, const T in_lo, const T in_hi, const T out_lo, const T out_hi)
     {
         const T in_norm = (val - in_lo) / (in_hi - in_lo);
-        return map_linear_norm<T>(in_norm, out_lo, out_hi);
+        return linear_norm<T>(in_norm, out_lo, out_hi);
     }
 
     /**
@@ -69,7 +69,7 @@ namespace bdsp::mappings
     template <typename T>
     inline T normalise(const T val, const T in_lo, const T in_hi)
     {
-        return map_linear(val, in_lo, in_hi, static_cast<T>(0.0), static_cast<T>(1.0));
+        return linear(val, in_lo, in_hi, static_cast<T>(0.0), static_cast<T>(1.0));
     }
 
     /**
@@ -84,7 +84,7 @@ namespace bdsp::mappings
     template <typename T>
     inline T normalise_bipolar(const T val, const T in_lo, const T in_hi)
     {
-        return map_linear(val, in_lo, in_hi, static_cast<T>(-1.0), static_cast<T>(1.0));
+        return linear(val, in_lo, in_hi, static_cast<T>(-1.0), static_cast<T>(1.0));
     }
 
     /**
@@ -97,7 +97,7 @@ namespace bdsp::mappings
     template <typename T>
     inline T unipolar_to_bipolar(T x)
     {
-        return map_linear_norm<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0));
+        return linear_norm<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0));
     }
 
     /**
@@ -110,7 +110,7 @@ namespace bdsp::mappings
     template <typename T>
     inline T bipolar_to_unipolar(T x)
     {
-        return map_linear<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0), static_cast<T>(0.0), static_cast<T>(1.0));
+        return linear<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0), static_cast<T>(0.0), static_cast<T>(1.0));
     }
 
     /**

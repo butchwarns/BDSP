@@ -6,7 +6,7 @@
 namespace bdsp::cv
 {
 
-    // Default tune to standard +-5V CV / 10 ocatve range
+    // Default tune to standard +-5V CV / 10 octave range
     const double ZERO_VOLT_FREQ_DEFAULT = constants::MIN_FILTER_FREQ * pow(2.0, 5.0);
 
     template <typename FloatType>

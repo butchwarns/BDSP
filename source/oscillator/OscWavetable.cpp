@@ -64,7 +64,7 @@ namespace bdsp::oscillator
         const float x1 = wavetable[idx1];
 
         // Interpolate to find output
-        const float y = bdsp::mappings::map_linear_norm(idx_frac, x0, x1);
+        const float y = bdsp::mappings::linear_norm(idx_frac, x0, x1);
 
         return y;
     }
