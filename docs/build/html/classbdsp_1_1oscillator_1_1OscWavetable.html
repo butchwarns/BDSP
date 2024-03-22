@@ -347,13 +347,13 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   64</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> x1 = <a class="code hl_variable" href="#a1e5b0bdb6524bd9b9db3a329d351e4fe">wavetable</a>[idx1];</div>
 <div class="line"><span class="lineno">   65</span> </div>
 <div class="line"><span class="lineno">   66</span>        <span class="comment">// Interpolate to find output</span></div>
-<div class="line"><span class="lineno">   67</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> y = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">bdsp::mappings::map_linear_norm</a>(idx_frac, x0, x1);</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> y = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">bdsp::mappings::linear_norm</a>(idx_frac, x0, x1);</div>
 <div class="line"><span class="lineno">   68</span> </div>
 <div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> y;</div>
 <div class="line"><span class="lineno">   70</span>    }</div>
-<div class="ttc" id="anamespacebdsp_1_1mappings_html_a55bd1c4f1e014b8b2e763ef074432192"><div class="ttname"><a href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">bdsp::mappings::map_linear_norm</a></div><div class="ttdeci">T map_linear_norm(const T val_norm, const T out_lo, const T out_hi)</div><div class="ttdoc">Maps a positive normalized value (0.0 to 1.0) to a given output range The &quot;lo&quot; bound can be higher th...</div><div class="ttdef"><b>Definition</b> <a href="mappings_8h_source.html#l00036">mappings.h:36</a></div></div>
+<div class="ttc" id="anamespacebdsp_1_1mappings_html_ae78c95891ac21f621cb9fee3e6136d2e"><div class="ttname"><a href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">bdsp::mappings::linear_norm</a></div><div class="ttdeci">T linear_norm(const T val_norm, const T out_lo, const T out_hi)</div><div class="ttdoc">Maps a positive normalized value (0.0 to 1.0) to a given output range The &quot;lo&quot; bound can be higher th...</div><div class="ttdef"><b>Definition</b> <a href="mappings_8h_source.html#l00036">mappings.h:36</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mappings_8h_source.html#l00036">bdsp::mappings::map_linear_norm()</a>, <a class="el" href="OscWavetable_8h_source.html#l00029">table_len</a>, and <a class="el" href="OscWavetable_8h_source.html#l00028">wavetable</a>.</p>
+<p class="reference">References <a class="el" href="mappings_8h_source.html#l00036">bdsp::mappings::linear_norm()</a>, <a class="el" href="OscWavetable_8h_source.html#l00029">table_len</a>, and <a class="el" href="OscWavetable_8h_source.html#l00028">wavetable</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="OscWavetable_8cpp_source.html#l00028">process()</a>.</p>
 
@@ -517,8 +517,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/butch/dev/plugins/bw_utility/BDSP/source/oscillator/<a class="el" href="OscWavetable_8h_source.html">OscWavetable.h</a></li>
-<li>/Users/butch/dev/plugins/bw_utility/BDSP/source/oscillator/<a class="el" href="OscWavetable_8cpp_source.html">OscWavetable.cpp</a></li>
+<li>/Users/butch/dev/plugins/filters/external/BDSP/source/oscillator/<a class="el" href="OscWavetable_8h_source.html">OscWavetable.h</a></li>
+<li>/Users/butch/dev/plugins/filters/external/BDSP/source/oscillator/<a class="el" href="OscWavetable_8cpp_source.html">OscWavetable.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

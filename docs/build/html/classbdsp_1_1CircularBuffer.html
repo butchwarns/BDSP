@@ -334,13 +334,11 @@ template&lt;typename T &gt; </div>
 <div class="line"><span class="lineno">   58</span> </div>
 <div class="line"><span class="lineno">   59</span>        <span class="keywordtype">double</span> fraction = samples_delay_fractional - (int)samples_delay_fractional;</div>
 <div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">mappings::map_linear_norm</a>(fraction, y1, y2);</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">mappings::ar_norm</a>(fraction, y1, y2);</div>
 <div class="line"><span class="lineno">   62</span>    }</div>
 <div class="ttc" id="aclassbdsp_1_1CircularBuffer_html_a2b0c5584794ec47c074a2c632ca892f5"><div class="ttname"><a href="#a2b0c5584794ec47c074a2c632ca892f5">bdsp::CircularBuffer::read</a></div><div class="ttdeci">T read(int samples_delay)</div><div class="ttdef"><b>Definition</b> <a href="CircularBuffer_8cpp_source.html#l00045">CircularBuffer.cpp:45</a></div></div>
-<div class="ttc" id="anamespacebdsp_1_1mappings_html_a55bd1c4f1e014b8b2e763ef074432192"><div class="ttname"><a href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">bdsp::mappings::map_linear_norm</a></div><div class="ttdeci">T map_linear_norm(const T val_norm, const T out_lo, const T out_hi)</div><div class="ttdoc">Maps a positive normalized value (0.0 to 1.0) to a given output range The &quot;lo&quot; bound can be higher th...</div><div class="ttdef"><b>Definition</b> <a href="mappings_8h_source.html#l00036">mappings.h:36</a></div></div>
+<div class="ttc" id="anamespacebdsp_1_1mappings_html_ae78c95891ac21f621cb9fee3e6136d2e"><div class="ttname"><a href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">bdsp::mappings::linear_norm</a></div><div class="ttdeci">T linear_norm(const T val_norm, const T out_lo, const T out_hi)</div><div class="ttdoc">Maps a positive normalized value (0.0 to 1.0) to a given output range The &quot;lo&quot; bound can be higher th...</div><div class="ttdef"><b>Definition</b> <a href="mappings_8h_source.html#l00036">mappings.h:36</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mappings_8h_source.html#l00036">bdsp::mappings::map_linear_norm()</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -449,8 +447,8 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/butch/dev/plugins/bw_utility/BDSP/source/<a class="el" href="CircularBuffer_8h_source.html">CircularBuffer.h</a></li>
-<li>/Users/butch/dev/plugins/bw_utility/BDSP/source/<a class="el" href="CircularBuffer_8cpp_source.html">CircularBuffer.cpp</a></li>
+<li>/Users/butch/dev/plugins/filters/external/BDSP/source/<a class="el" href="CircularBuffer_8h_source.html">CircularBuffer.h</a></li>
+<li>/Users/butch/dev/plugins/filters/external/BDSP/source/<a class="el" href="CircularBuffer_8cpp_source.html">CircularBuffer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

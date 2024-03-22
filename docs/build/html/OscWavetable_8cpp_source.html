@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BDSP: /Users/butch/dev/plugins/bw_utility/BDSP/source/oscillator/OscWavetable.cpp Source File</title>
+<title>BDSP: /Users/butch/dev/plugins/filters/external/BDSP/source/oscillator/OscWavetable.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -162,7 +162,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> x1 = <a class="code hl_variable" href="classbdsp_1_1oscillator_1_1OscWavetable.html#a1e5b0bdb6524bd9b9db3a329d351e4fe">wavetable</a>[idx1];</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="comment">// Interpolate to find output</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> y = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">bdsp::mappings::map_linear_norm</a>(idx_frac, x0, x1);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> y = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">bdsp::mappings::linear_norm</a>(idx_frac, x0, x1);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> y;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
@@ -183,7 +183,7 @@ $(function() { codefold.init(0); });
 <div class="ttc" id="aclassbdsp_1_1oscillator_1_1OscWavetable_html_accabf22b417b62b740b80db1432173a4"><div class="ttname"><a href="classbdsp_1_1oscillator_1_1OscWavetable.html#accabf22b417b62b740b80db1432173a4">bdsp::oscillator::OscWavetable::idx</a></div><div class="ttdeci">float idx</div><div class="ttdef"><b>Definition</b> <a href="OscWavetable_8h_source.html#l00023">OscWavetable.h:23</a></div></div>
 <div class="ttc" id="aclassbdsp_1_1oscillator_1_1OscWavetable_html_adaf7a2cc692a7747144e4a7120a91416"><div class="ttname"><a href="classbdsp_1_1oscillator_1_1OscWavetable.html#adaf7a2cc692a7747144e4a7120a91416">bdsp::oscillator::OscWavetable::delta</a></div><div class="ttdeci">float delta</div><div class="ttdef"><b>Definition</b> <a href="OscWavetable_8h_source.html#l00025">OscWavetable.h:25</a></div></div>
 <div class="ttc" id="aclassbdsp_1_1oscillator_1_1OscWavetable_html_afdf819709155039b4cabb13ac4dcf848"><div class="ttname"><a href="classbdsp_1_1oscillator_1_1OscWavetable.html#afdf819709155039b4cabb13ac4dcf848">bdsp::oscillator::OscWavetable::update_delta</a></div><div class="ttdeci">void update_delta()</div><div class="ttdef"><b>Definition</b> <a href="#l00047">OscWavetable.cpp:47</a></div></div>
-<div class="ttc" id="anamespacebdsp_1_1mappings_html_a55bd1c4f1e014b8b2e763ef074432192"><div class="ttname"><a href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">bdsp::mappings::map_linear_norm</a></div><div class="ttdeci">T map_linear_norm(const T val_norm, const T out_lo, const T out_hi)</div><div class="ttdoc">Maps a positive normalized value (0.0 to 1.0) to a given output range The &quot;lo&quot; bound can be higher th...</div><div class="ttdef"><b>Definition</b> <a href="mappings_8h_source.html#l00036">mappings.h:36</a></div></div>
+<div class="ttc" id="anamespacebdsp_1_1mappings_html_ae78c95891ac21f621cb9fee3e6136d2e"><div class="ttname"><a href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">bdsp::mappings::linear_norm</a></div><div class="ttdeci">T linear_norm(const T val_norm, const T out_lo, const T out_hi)</div><div class="ttdoc">Maps a positive normalized value (0.0 to 1.0) to a given output range The &quot;lo&quot; bound can be higher th...</div><div class="ttdef"><b>Definition</b> <a href="mappings_8h_source.html#l00036">mappings.h:36</a></div></div>
 <div class="ttc" id="anamespacebdsp_1_1oscillator_html"><div class="ttname"><a href="namespacebdsp_1_1oscillator.html">bdsp::oscillator</a></div><div class="ttdef"><b>Definition</b> <a href="#l00003">OscWavetable.cpp:4</a></div></div>
 <div class="ttc" id="anamespacebdsp_html"><div class="ttname"><a href="namespacebdsp.html">bdsp</a></div><div class="ttdef"><b>Definition</b> <a href="CircularBuffer_8cpp_source.html#l00004">CircularBuffer.cpp:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

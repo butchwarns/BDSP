@@ -384,7 +384,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   55</span>            <span class="comment">// ATTACK &quot;aims higher&quot; to make the curve more linear, like in the analog circuit</span></div>
 <div class="line"><span class="lineno">   56</span>            <span class="comment">// 12 V is given by the Eurorack power specs (envelope output peaks at 8 V)</span></div>
 <div class="line"><span class="lineno">   57</span>            <span class="comment">// output = adsp::skewNormalized(counter, 1.8);</span></div>
-<div class="line"><span class="lineno">   58</span>            output = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">mappings::map_linear_norm</a>(<a class="code hl_variable" href="#a5485a0b18f3bb5412a1f8748a5bb437d">counter</a>, seg_start, ENV_AMPLITUDE);</div>
+<div class="line"><span class="lineno">   58</span>            output = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">mappings::linear_norm</a>(<a class="code hl_variable" href="#a5485a0b18f3bb5412a1f8748a5bb437d">counter</a>, seg_start, ENV_AMPLITUDE);</div>
 <div class="line"><span class="lineno">   59</span> </div>
 <div class="line"><span class="lineno">   60</span>            <span class="comment">// Increment counter</span></div>
 <div class="line"><span class="lineno">   61</span>            <a class="code hl_variable" href="#a5485a0b18f3bb5412a1f8748a5bb437d">counter</a> += <a class="code hl_variable" href="#a52be3d01e2b204540c146062b8fa6f65">delta</a>;</div>
@@ -395,9 +395,9 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   66</span>            <span class="comment">// Shape and scale to desired linear segment</span></div>
 <div class="line"><span class="lineno">   67</span>            <span class="comment">// Counter needs to be inverted for the correct shape of the decreasing segment</span></div>
 <div class="line"><span class="lineno">   68</span>            counter_inv = 1.0f - <a class="code hl_variable" href="#a5485a0b18f3bb5412a1f8748a5bb437d">counter</a>;</div>
-<div class="line"><span class="lineno">   69</span>            counter_inv = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">mappings::skew_norm_pos</a>(counter_inv, 0.2f);</div>
+<div class="line"><span class="lineno">   69</span>            counter_inv = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">mappings::skew_norm_pos</a>(counter_inv, 0.2f);</div>
 <div class="line"><span class="lineno">   70</span>            counter_inv = 1.0f - counter_inv;</div>
-<div class="line"><span class="lineno">   71</span>            output = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">mappings::map_linear_norm</a>(counter_inv, seg_start, 0.0f);</div>
+<div class="line"><span class="lineno">   71</span>            output = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">mappings::linear_norm</a>(counter_inv, seg_start, 0.0f);</div>
 <div class="line"><span class="lineno">   72</span> </div>
 <div class="line"><span class="lineno">   73</span>            <span class="comment">// Decrement counter</span></div>
 <div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="#a5485a0b18f3bb5412a1f8748a5bb437d">counter</a> += <a class="code hl_variable" href="#a52be3d01e2b204540c146062b8fa6f65">delta</a>;</div>
@@ -415,9 +415,9 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   86</span>    }</div>
 <div class="ttc" id="aclassbdsp_1_1envelope_1_1AR_html_aa0a3c871ea870b888bf918c9f5488c04"><div class="ttname"><a href="#aa0a3c871ea870b888bf918c9f5488c04">bdsp::envelope::AR::transition_state</a></div><div class="ttdeci">void transition_state()</div><div class="ttdef"><b>Definition</b> <a href="AR_8cpp_source.html#l00103">AR.cpp:103</a></div></div>
 <div class="ttc" id="aclassbdsp_1_1envelope_1_1AR_html_ae3571cb8f42180b66629cdefae459bde"><div class="ttname"><a href="#ae3571cb8f42180b66629cdefae459bde">bdsp::envelope::AR::output_prev</a></div><div class="ttdeci">float output_prev</div><div class="ttdef"><b>Definition</b> <a href="AR_8h_source.html#l00049">AR.h:49</a></div></div>
-<div class="ttc" id="anamespacebdsp_1_1mappings_html_a55bd1c4f1e014b8b2e763ef074432192"><div class="ttname"><a href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">bdsp::mappings::map_linear_norm</a></div><div class="ttdeci">T map_linear_norm(const T val_norm, const T out_lo, const T out_hi)</div><div class="ttdoc">Maps a positive normalized value (0.0 to 1.0) to a given output range The &quot;lo&quot; bound can be higher th...</div><div class="ttdef"><b>Definition</b> <a href="mappings_8h_source.html#l00036">mappings.h:36</a></div></div>
+<div class="ttc" id="anamespacebdsp_1_1mappings_html_ae78c95891ac21f621cb9fee3e6136d2e"><div class="ttname"><a href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">bdsp::mappings::linear_norm</a></div><div class="ttdeci">T linear_norm(const T val_norm, const T out_lo, const T out_hi)</div><div class="ttdoc">Maps a positive normalized value (0.0 to 1.0) to a given output range The &quot;lo&quot; bound can be higher th...</div><div class="ttdef"><b>Definition</b> <a href="mappings_8h_source.html#l00036">mappings.h:36</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#a903b9fabc72389516fa3c6d08db5d953ac6ddd0f72ff2fd344693b9ca8d483871">ATTACK</a>, <a class="el" href="AR_8h_source.html#l00052">counter</a>, <a class="el" href="AR_8h_source.html#l00053">delta</a>, <a class="el" href="#a903b9fabc72389516fa3c6d08db5d953aa5daf7f2ebbba4975d61dab1c40188c7">IDLE</a>, <a class="el" href="mappings_8h_source.html#l00036">bdsp::mappings::map_linear_norm()</a>, <a class="el" href="AR_8h_source.html#l00049">output_prev</a>, <a class="el" href="#a903b9fabc72389516fa3c6d08db5d953a7d649ef069df9885e382417c79f3d5cd">RELEASE</a>, <a class="el" href="AR_8h_source.html#l00038">state</a>, and <a class="el" href="AR_8cpp_source.html#l00103">transition_state()</a>.</p>
+<p class="reference">References <a class="el" href="#a903b9fabc72389516fa3c6d08db5d953ac6ddd0f72ff2fd344693b9ca8d483871">ATTACK</a>, <a class="el" href="AR_8h_source.html#l00052">counter</a>, <a class="el" href="AR_8h_source.html#l00053">delta</a>, <a class="el" href="#a903b9fabc72389516fa3c6d08db5d953aa5daf7f2ebbba4975d61dab1c40188c7">IDLE</a>, <a class="el" href="mappings_8h_source.html#l00036">bdsp::mappings::linear_norm()</a>, <a class="el" href="AR_8h_source.html#l00049">output_prev</a>, <a class="el" href="#a903b9fabc72389516fa3c6d08db5d953a7d649ef069df9885e382417c79f3d5cd">RELEASE</a>, <a class="el" href="AR_8h_source.html#l00038">state</a>, and <a class="el" href="AR_8cpp_source.html#l00103">transition_state()</a>.</p>
 
 </div>
 </div>
@@ -916,8 +916,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/butch/dev/plugins/bw_utility/BDSP/source/envelope/<a class="el" href="AR_8h_source.html">AR.h</a></li>
-<li>/Users/butch/dev/plugins/bw_utility/BDSP/source/envelope/<a class="el" href="AR_8cpp_source.html">AR.cpp</a></li>
+<li>/Users/butch/dev/plugins/filters/external/BDSP/source/envelope/<a class="el" href="AR_8h_source.html">AR.h</a></li>
+<li>/Users/butch/dev/plugins/filters/external/BDSP/source/envelope/<a class="el" href="AR_8cpp_source.html">AR.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

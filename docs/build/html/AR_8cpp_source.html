@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BDSP: /Users/butch/dev/plugins/bw_utility/BDSP/source/envelope/AR.cpp Source File</title>
+<title>BDSP: /Users/butch/dev/plugins/filters/external/BDSP/source/envelope/AR.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -153,7 +153,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="comment">// ATTACK &quot;aims higher&quot; to make the curve more linear, like in the analog circuit</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="comment">// 12 V is given by the Eurorack power specs (envelope output peaks at 8 V)</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="comment">// output = adsp::skewNormalized(counter, 1.8);</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            output = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">mappings::map_linear_norm</a>(<a class="code hl_variable" href="classbdsp_1_1envelope_1_1AR.html#a5485a0b18f3bb5412a1f8748a5bb437d">counter</a>, seg_start, ENV_AMPLITUDE);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            output = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">mappings::linear_norm</a>(<a class="code hl_variable" href="classbdsp_1_1envelope_1_1AR.html#a5485a0b18f3bb5412a1f8748a5bb437d">counter</a>, seg_start, ENV_AMPLITUDE);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="comment">// Increment counter</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <a class="code hl_variable" href="classbdsp_1_1envelope_1_1AR.html#a5485a0b18f3bb5412a1f8748a5bb437d">counter</a> += <a class="code hl_variable" href="classbdsp_1_1envelope_1_1AR.html#a52be3d01e2b204540c146062b8fa6f65">delta</a>;</div>
@@ -166,7 +166,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            counter_inv = 1.0f - <a class="code hl_variable" href="classbdsp_1_1envelope_1_1AR.html#a5485a0b18f3bb5412a1f8748a5bb437d">counter</a>;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            counter_inv = mappings::skew_norm_pos(counter_inv, 0.2f);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            counter_inv = 1.0f - counter_inv;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            output = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">mappings::map_linear_norm</a>(counter_inv, seg_start, 0.0f);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            output = <a class="code hl_function" href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">mappings::linear_norm</a>(counter_inv, seg_start, 0.0f);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="comment">// Decrement counter</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <a class="code hl_variable" href="classbdsp_1_1envelope_1_1AR.html#a5485a0b18f3bb5412a1f8748a5bb437d">counter</a> += <a class="code hl_variable" href="classbdsp_1_1envelope_1_1AR.html#a52be3d01e2b204540c146062b8fa6f65">delta</a>;</div>
@@ -305,7 +305,7 @@ $(function() { codefold.init(0); });
 <div class="ttc" id="aclassbdsp_1_1envelope_1_1AR_html_ad573ac2a4fc0d29cc62fdb45694cae77"><div class="ttname"><a href="classbdsp_1_1envelope_1_1AR.html#ad573ac2a4fc0d29cc62fdb45694cae77">bdsp::envelope::AR::PEAK_AMPLITUDE</a></div><div class="ttdeci">const float PEAK_AMPLITUDE</div><div class="ttdef"><b>Definition</b> <a href="AR_8h_source.html#l00045">AR.h:45</a></div></div>
 <div class="ttc" id="aclassbdsp_1_1envelope_1_1AR_html_ae3571cb8f42180b66629cdefae459bde"><div class="ttname"><a href="classbdsp_1_1envelope_1_1AR.html#ae3571cb8f42180b66629cdefae459bde">bdsp::envelope::AR::output_prev</a></div><div class="ttdeci">float output_prev</div><div class="ttdef"><b>Definition</b> <a href="AR_8h_source.html#l00049">AR.h:49</a></div></div>
 <div class="ttc" id="anamespacebdsp_1_1envelope_html"><div class="ttname"><a href="namespacebdsp_1_1envelope.html">bdsp::envelope</a></div><div class="ttdef"><b>Definition</b> <a href="#l00003">AR.cpp:4</a></div></div>
-<div class="ttc" id="anamespacebdsp_1_1mappings_html_a55bd1c4f1e014b8b2e763ef074432192"><div class="ttname"><a href="namespacebdsp_1_1mappings.html#a55bd1c4f1e014b8b2e763ef074432192">bdsp::mappings::map_linear_norm</a></div><div class="ttdeci">T map_linear_norm(const T val_norm, const T out_lo, const T out_hi)</div><div class="ttdoc">Maps a positive normalized value (0.0 to 1.0) to a given output range The &quot;lo&quot; bound can be higher th...</div><div class="ttdef"><b>Definition</b> <a href="mappings_8h_source.html#l00036">mappings.h:36</a></div></div>
+<div class="ttc" id="anamespacebdsp_1_1mappings_html_ae78c95891ac21f621cb9fee3e6136d2e"><div class="ttname"><a href="namespacebdsp_1_1mappings.html#ae78c95891ac21f621cb9fee3e6136d2e">bdsp::mappings::linear_norm</a></div><div class="ttdeci">T linear_norm(const T val_norm, const T out_lo, const T out_hi)</div><div class="ttdoc">Maps a positive normalized value (0.0 to 1.0) to a given output range The &quot;lo&quot; bound can be higher th...</div><div class="ttdef"><b>Definition</b> <a href="mappings_8h_source.html#l00036">mappings.h:36</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
