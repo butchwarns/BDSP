@@ -18,7 +18,7 @@ namespace bdsp::envelope
 
         counter = 0.0;
         delta = 0.0;
-        prev_output = 0.0;
+        output_prev = 0.0;
     }
 
     void AR::set_attack(float _attack)
@@ -54,8 +54,7 @@ namespace bdsp::envelope
 
             // ATTACK "aims higher" to make the curve more linear, like in the analog circuit
             // 12 V is given by the Eurorack power specs (envelope output peaks at 8 V)
-            // output = adsp::skewNormalized(counter, 1.8);
-            output = mappings::map_linear_norm(counter, seg_start, ENV_AMPLITUDE);
+            output = mappings::linear_norm(counter, segment_start, PEAK_AMPLITUDE);
 
             // Increment counter
             counter += delta;
@@ -66,9 +65,9 @@ namespace bdsp::envelope
             // Shape and scale to desired linear segment
             // Counter needs to be inverted for the correct shape of the decreasing segment
             counter_inv = 1.0f - counter;
-            counter_inv = mappings::skew_norm_pos(counter_inv, 0.2f);
+            counter_inv = mappings::skew_norm(counter_inv, 0.2f);
             counter_inv = 1.0f - counter_inv;
-            output = mappings::map_linear_norm(counter_inv, seg_start, 0.0f);
+            output = mappings::linear_norm(counter_inv, segment_start, 0.0f);
 
             // Decrement counter
             counter += delta;
@@ -159,7 +158,7 @@ namespace bdsp::envelope
                 counter = 0.0f;
 
                 // Start ATTACK from current output value
-                segment_start = output_preve;
+                segment_start = output_prev;
             }
             // If RELEASE is over..
             else if (output_prev <= (0.0f + VOLTAGE_MARGIN))
