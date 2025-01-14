@@ -10,30 +10,30 @@ namespace bdsp::maps
      * @brief Maps a bipolar normalized value (-1.0 to 1.0) to a given output range
      *        The "lo" bound can be higher than the "hi" bound
      *
-     * @tparam T floating-point type
+     * @tparam FloatType floating-point type
      * @param val_norm
      * @param out_lo
      * @param out_hi
-     * @return T
+     * @return FloatType
      */
-    template <typename T>
-    inline T linear_norm_bipolar(const T val_norm, const T out_lo, const T out_hi)
+    template <typename FloatType>
+    inline FloatType linear_norm_bipolar(const FloatType val_norm, const FloatType out_lo, const FloatType out_hi)
     {
-        return (val_norm + static_cast<T>(1.0)) / static_cast<T>(2.0) * (out_hi - out_lo) + out_lo;
+        return (val_norm + static_cast<FloatType>(1.0)) / static_cast<FloatType>(2.0) * (out_hi - out_lo) + out_lo;
     }
 
     /**
      * @brief Maps a positive normalized value (0.0 to 1.0) to a given output range
      *        The "lo" bound can be higher than the "hi" bound
      *
-     * @tparam T floating-point type
+     * @tparam FloatType floating-point type
      * @param val_norm
      * @param out_lo
      * @param out_hi
-     * @return T
+     * @return FloatTypeloatType
      */
-    template <typename T>
-    inline T linear_norm(const T val_norm, const T out_lo, const T out_hi)
+    template <typename FloatType>
+    inline FloatType linear_norm(const FloatType val_norm, const FloatType out_lo, const FloatType out_hi)
     {
         return val_norm * (out_hi - out_lo) + out_lo;
     }
@@ -42,75 +42,75 @@ namespace bdsp::maps
      * @brief Maps a value linearly from an input range to an output range
      *        The "lo" bounds can be higher than the "hi" bounds
      *
-     * @tparam T floating-point type
+     * @tparam FloatType floating-point type
      * @param val
      * @param in_lo
      * @param in_hi
      * @param out_lo
      * @param out_hi
-     * @return T
+     * @return FloatType
      */
-    template <typename T>
-    inline T linear(const T val, const T in_lo, const T in_hi, const T out_lo, const T out_hi)
+    template <typename FloatType>
+    inline FloatType linear(const FloatType val, const FloatType in_lo, const FloatType in_hi, const FloatType out_lo, const FloatType out_hi)
     {
-        const T in_norm = (val - in_lo) / (in_hi - in_lo);
-        return linear_norm<T>(in_norm, out_lo, out_hi);
+        const FloatType in_norm = (val - in_lo) / (in_hi - in_lo);
+        return linear_norm<FloatType>(in_norm, out_lo, out_hi);
     }
 
     /**
      * @brief Normalises a given value to the unit interval (0.0 to 1.0)
      *
-     * @tparam T floating-point type
+     * @tparam FloatType floating-point type
      * @param val Value to normalise
      * @param in_lo Lower bound of input value
      * @param in_hi Uppter bound of input value
-     * @return T
+     * @return FloatType
      */
-    template <typename T>
-    inline T normalise(const T val, const T in_lo, const T in_hi)
+    template <typename FloatType>
+    inline FloatType normalise(const FloatType val, const FloatType in_lo, const FloatType in_hi)
     {
-        return linear(val, in_lo, in_hi, static_cast<T>(0.0), static_cast<T>(1.0));
+        return linear(val, in_lo, in_hi, static_cast<FloatType>(0.0), static_cast<FloatType>(1.0));
     }
 
     /**
      * @brief Normalises a given value to the bipolar unit interval (-1.0 to 1.0)
      *
-     * @tparam T floating-point type
+     * @tparam FloatType floating-point type
      * @param val Value to normalise
      * @param in_lo Lower bound of input value
      * @param in_hi Uppter bound of input value
-     * @return T
+     * @return FloatType
      */
-    template <typename T>
-    inline T normalise_bipolar(const T val, const T in_lo, const T in_hi)
+    template <typename FloatType>
+    inline FloatType normalise_bipolar(const FloatType val, const FloatType in_lo, const FloatType in_hi)
     {
-        return linear(val, in_lo, in_hi, static_cast<T>(-1.0), static_cast<T>(1.0));
+        return linear(val, in_lo, in_hi, static_cast<FloatType>(-1.0), static_cast<FloatType>(1.0));
     }
 
     /**
      * @brief Convert value from unipolar to bipolar range
      *
-     * @tparam T floating-point type
+     * @tparam FloatType floating-point type
      * @param val_unipolar Unipolar value in range [0.0, 1.0]
      * @return Corresponding bipolar value in range [-1.0, 1.0]
      */
-    template <typename T>
-    inline T unipolar_to_bipolar(T val_unipolar)
+    template <typename FloatType>
+    inline FloatType unipolar_to_bipolar(FloatType val_unipolar)
     {
-        return linear_norm<T>(val_unipolar, static_cast<T>(-1.0), static_cast<T>(1.0));
+        return linear_norm<FloatType>(x, static_cast<FloatType>(-1.0), static_cast<FloatType>(1.0));
     }
 
     /**
      * @brief Convert value from bipolar to unipolar range
      *
-     * @tparam T floating-point type
+     * @tparam FloatType floating-point type
      * @param val_bipolar Bipolar value in range [-1.0, 1.0]
      * @return Corresponding unipolar value in range [0.0, 1.0]
      */
-    template <typename T>
-    inline T bipolar_to_unipolar(T val_bipolar)
+    template <typename FloatType>
+    inline FloatType bipolar_to_unipolar(FloatType val_bipolar)
     {
-        return linear<T>(val_bipolar, static_cast<T>(-1.0), static_cast<T>(1.0), static_cast<T>(0.0), static_cast<T>(1.0));
+        return linear<FloatType>(x, static_cast<FloatType>(-1.0), static_cast<FloatType>(1.0), static_cast<FloatType>(0.0), static_cast<FloatType>(1.0));
     }
 
     /**

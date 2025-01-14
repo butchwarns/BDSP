@@ -45,14 +45,14 @@ namespace bdsp::utility
     /**
      * @brief Clamps value to given interval
      *
-     * @tparam T floating-point type
+     * @tparam FloatType floating-point type
      * @param x Value to clamp
      * @param min Lower bound
      * @param max Upper bound
      * @return Clamped value
      */
-    template <typename T>
-    inline T clamp(T x, T min = static_cast<T>(-1.0), T max = static_cast<T>(1.0))
+    template <typename FloatType>
+    inline FloatType clamp(FloatType x, FloatType min = static_cast<FloatType>(-1.0), FloatType max = static_cast<FloatType>(1.0))
     {
         if (x < min)
         {
