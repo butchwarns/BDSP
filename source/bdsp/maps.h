@@ -95,7 +95,7 @@ namespace bdsp::maps
      * @return Corresponding bipolar value in range [-1.0, 1.0]
      */
     template <typename T>
-    inline T to_bipolar(T val_unipolar)
+    inline T unipolar_to_bipolar(T val_unipolar)
     {
         return linear_norm<T>(val_unipolar, static_cast<T>(-1.0), static_cast<T>(1.0));
     }
@@ -108,7 +108,7 @@ namespace bdsp::maps
      * @return Corresponding unipolar value in range [0.0, 1.0]
      */
     template <typename T>
-    inline T to_unipolar(T val_bipolar)
+    inline T bipolar_to_unipolar(T val_bipolar)
     {
         return linear<T>(val_bipolar, static_cast<T>(-1.0), static_cast<T>(1.0), static_cast<T>(0.0), static_cast<T>(1.0));
     }
