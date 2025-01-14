@@ -6,11 +6,7 @@
 namespace bdsp
 {
 
-    struct MidSideScalingFactor
-    {
-        static constexpr double CORRELATED = 2.0;
-        static constexpr double UNCORRELATED = 1.4142135623730950488016887242096980785696718753769480731766797379;
-    };
+    static constexpr double SCALING_UNCORRELATED = 1.4142135623730950488016887242096980785696718753769480731766797379;
 
     template <typename FloatType>
     class MidSide
@@ -22,44 +18,24 @@ namespace bdsp
         ~MidSide() = delete;
 
         static inline void
-        encode_custom(FloatType scaling_factor,
-                      FloatType left,
-                      FloatType right,
-                      FloatType &mid,
-                      FloatType &side)
+        encode(
+            FloatType left,
+            FloatType right,
+            FloatType &mid,
+            FloatType &side)
         {
-            mid = (left + right) / scaling_factor;
-            side = (left - right) / scaling_factor;
+            mid = (left + right) / SCALING_UNCORRELATED;
+            side = (left - right) / SCALING_UNCORRELATED;
         }
 
-        static inline void encode_correlated(FloatType left, FloatType right, FloatType &mid, FloatType &side)
+        static inline void decode(
+            FloatType &left,
+            FloatType &right,
+            FloatType mid,
+            FloatType side)
         {
-            encode_custom((FloatType)MidSideScalingFactor::CORRELATED, left, right, mid, side);
-        }
-
-        static inline void encode_uncorrelated(FloatType left, FloatType right, FloatType &mid, FloatType &side)
-        {
-            encode_custom((FloatType)MidSideScalingFactor::UNCORRELATED, left, right, mid, side);
-        }
-
-        static inline void decode_custom(FloatType scaling_factor,
-                                         FloatType &left,
-                                         FloatType &right,
-                                         FloatType mid,
-                                         FloatType side)
-        {
-            left = (mid + side) / scaling_factor;
-            right = (mid - side) / scaling_factor;
-        }
-
-        static inline void decode_correlated(FloatType &left, FloatType &right, FloatType mid, FloatType side)
-        {
-            decode_custom((FloatType)MidSideScalingFactor::CORRELATED, left, right, mid, side);
-        }
-
-        static inline void decode_uncorrelated(FloatType &left, FloatType &right, FloatType mid, FloatType side)
-        {
-            decode_custom((FloatType)MidSideScalingFactor::UNCORRELATED, left, right, mid, side);
+            left = (mid + side) / SCALING_UNCORRELATED;
+            right = (mid - side) / SCALING_UNCORRELATED;
         }
     };
 
