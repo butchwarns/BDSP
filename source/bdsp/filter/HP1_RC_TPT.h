@@ -1,7 +1,7 @@
 #ifndef HP1_RC_TPT_H
 #define HP1_RC_TPT_H
 
-#include "../mappings.h"
+#include "../maps.h"
 
 namespace bdsp::filter
 {

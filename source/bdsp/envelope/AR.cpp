@@ -54,7 +54,7 @@ namespace bdsp::envelope
 
             // ATTACK "aims higher" to make the curve more linear, like in the analog circuit
             // 12 V is given by the Eurorack power specs (envelope output peaks at 8 V)
-            output = mappings::linear_norm(counter, segment_start, PEAK_AMPLITUDE);
+            output = maps::linear_norm(counter, segment_start, PEAK_AMPLITUDE);
 
             // Increment counter
             counter += delta;
@@ -65,9 +65,9 @@ namespace bdsp::envelope
             // Shape and scale to desired linear segment
             // Counter needs to be inverted for the correct shape of the decreasing segment
             counter_inv = 1.0f - counter;
-            counter_inv = mappings::skew_norm(counter_inv, 0.2f);
+            counter_inv = maps::skew_norm(counter_inv, 0.2f);
             counter_inv = 1.0f - counter_inv;
-            output = mappings::linear_norm(counter_inv, segment_start, 0.0f);
+            output = maps::linear_norm(counter_inv, segment_start, 0.0f);
 
             // Decrement counter
             counter += delta;

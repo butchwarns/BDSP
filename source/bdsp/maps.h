@@ -1,10 +1,10 @@
-#ifndef MAPPINGS_H
-#define MAPPINGS_H
+#ifndef MAPS_H
+#define MAPS_H
 
 #include "constants.h"
 #include <cmath>
 
-namespace bdsp::mappings
+namespace bdsp::maps
 {
     /**
      * @brief Maps a bipolar normalized value (-1.0 to 1.0) to a given output range
@@ -179,6 +179,6 @@ namespace bdsp::mappings
         return wa;
     }
 
-} // namespace bdsp::mappings
+} // namespace bdsp::maps
 
-#endif // MAPPINGS_H
+#endif // MAPS_H

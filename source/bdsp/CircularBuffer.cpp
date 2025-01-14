@@ -1,5 +1,5 @@
 #include "CircularBuffer.h"
-#include "mappings.h"
+#include "maps.h"
 
 namespace bdsp
 {
@@ -58,7 +58,7 @@ namespace bdsp
 
         double fraction = samples_delay_fractional - (int)samples_delay_fractional;
 
-        return mappings::linear_norm(fraction, y1, y2);
+        return maps::linear_norm(fraction, y1, y2);
     }
 
 } // namespace bdsp

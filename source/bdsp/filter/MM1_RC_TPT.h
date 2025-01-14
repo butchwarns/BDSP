@@ -1,7 +1,7 @@
 #ifndef __MM1_RC_TPT_H__
 #define __MM1_RC_TPT_H__
 
-#include "../mappings.h"
+#include "../maps.h"
 
 namespace bdsp
 {

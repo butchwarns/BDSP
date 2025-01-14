@@ -4,7 +4,7 @@
 #include <array>
 #include <random>
 
-#include "mappings.h"
+#include "maps.h"
 
 namespace bdsp
 {
@@ -23,13 +23,13 @@ namespace bdsp
 
             noise = (double)rand();
             noise = noise / RAND_MAX
-                                noise = mappings::unipolar_to_bipolar(noise);
+                                noise = maps::unipolar_to_bipolar(noise);
 #else
             const double ARC4RANDOM_MAX = 4294967295.0; // (2^32 - 1)
 
             noise = (double)arc4random();
             noise = noise / ARC4RANDOM_MAX;
-            noise = mappings::unipolar_to_bipolar(noise);
+            noise = maps::unipolar_to_bipolar(noise);
 #endif
 
             return noise;
