@@ -91,26 +91,26 @@ namespace bdsp::maps
      * @brief Convert value from unipolar to bipolar range
      *
      * @tparam T floating-point type
-     * @param x Unipolar value in range [0.0, 1.0]
+     * @param val_unipolar Unipolar value in range [0.0, 1.0]
      * @return Corresponding bipolar value in range [-1.0, 1.0]
      */
     template <typename T>
-    inline T unipolar_to_bipolar(T x)
+    inline T to_bipolar(T val_unipolar)
     {
-        return linear_norm<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0));
+        return linear_norm<T>(val_unipolar, static_cast<T>(-1.0), static_cast<T>(1.0));
     }
 
     /**
      * @brief Convert value from bipolar to unipolar range
      *
      * @tparam T floating-point type
-     * @param x Bipolar value in range [-1.0, 1.0]
+     * @param val_bipolar Bipolar value in range [-1.0, 1.0]
      * @return Corresponding unipolar value in range [0.0, 1.0]
      */
     template <typename T>
-    inline T bipolar_to_unipolar(T x)
+    inline T to_unipolar(T val_bipolar)
     {
-        return linear<T>(x, static_cast<T>(-1.0), static_cast<T>(1.0), static_cast<T>(0.0), static_cast<T>(1.0));
+        return linear<T>(val_bipolar, static_cast<T>(-1.0), static_cast<T>(1.0), static_cast<T>(0.0), static_cast<T>(1.0));
     }
 
     /**
